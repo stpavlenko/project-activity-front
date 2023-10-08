@@ -1,10 +1,9 @@
-<script setup></script>
+<script setup>
+import Header from './components/Header/Header.vue';
+</script>
 
 <template>
-  <header>
-    <h1>Тут надо хэдер</h1>
-  </header>
-
+  <Header/>
   <RouterView />
 </template>
 
