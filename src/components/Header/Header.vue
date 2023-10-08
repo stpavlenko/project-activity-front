@@ -48,6 +48,8 @@ import { RouterLink } from 'vue-router';
     height: 104px;
     background-color: rgb(30, 30, 30);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo{
