@@ -31,6 +31,14 @@
     border: 1px solid #1e1e1e;
     padding: 1rem 2rem;
   }
+  &__submit-btn {
+    background: #1e1e1e;
+    color: #ffffff;
+    font-weight: 700;
+    width: fit-content;
+    border-radius: 0;
+    padding: 1rem 5rem;
+  }
 }
 
 body {
