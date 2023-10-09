@@ -1,12 +1,13 @@
-<script setup></script>
+<script setup>
+import Header from './components/Header/Header.vue';
+import Footer from './components/Footer/Footer.vue';
+</script>
 
 <template>
-  <div class="wrapper">
-    <header>
-      <h1>Тут надо хэдер</h1>
-    </header>
-    <RouterView />
-  </div>
+  <Header/>
+
+  <RouterView />
+  <Footer/>
 </template>
 
 <style lang="scss">
