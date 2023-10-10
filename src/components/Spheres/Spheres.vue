@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      
+      <button class="spheres-btn">Загрузить еще</button>
     </div>
 </template>
 
