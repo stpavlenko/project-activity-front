@@ -5,9 +5,9 @@ const radioChecked = ref('show')
 </script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <h2 class="view__title">Стать участником</h2>
-    <div class="wrapper">
+    <div class="form__wrapper">
       <section class="row g-3">
         <div class="col-4">
           <input type="text" class="form-control view__input" placeholder="Фамилия" />
@@ -97,7 +97,7 @@ const radioChecked = ref('show')
 </template>
 
 <style scoped lang="scss">
-.wrapper {
+.form__wrapper {
   border: 1px solid #1e1e1e;
   padding: 3rem 2rem;
   display: flex;

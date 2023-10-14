@@ -1,49 +1,44 @@
 <script>
-    export default {
-        name: 'Spheres'
-    }
+export default {
+  name: 'Spheres'
+}
 </script>
 
 <template>
-       <div class="main__spheres">
-      <h2 class="spheres__heading">Сферы</h2>
-      <div class="spheres__container">
-        <div class="spheres-item item1">
-          <h3 class="sphere__heading">Математика</h3>
-        </div>
-        <div class="spheres-item item2">
-          <h3 class="sphere__heading">Физика</h3>
-        </div>
-        <div class="spheres-item item3">
-          <h3 class="sphere__heading">Химия</h3>
-        </div>
-        <div class="spheres-item item4">
-          <h3 class="sphere__heading">География</h3>
-        </div>
-        <div class="spheres-item item5">
-          <h3 class="sphere__heading">Социология</h3>
-        </div>
-        <div class="spheres-item item6">
-          <h3 class="sphere__heading">Информатика</h3>
-        </div>
-        <div class="spheres-item item7">
-          <h3 class="sphere__heading">История</h3>
-        </div>
-        <div class="spheres-item item8">
-          <h3 class="sphere__heading">Экономика</h3>
-        </div>
+  <div class="main__spheres">
+    <h2 class="spheres__heading">Сферы</h2>
+    <div class="spheres__container">
+      <div class="spheres-item item1">
+        <h3 class="sphere__heading">Математика</h3>
       </div>
-
-      <button class="spheres-btn">Загрузить еще</button>
+      <div class="spheres-item item2">
+        <h3 class="sphere__heading">Физика</h3>
+      </div>
+      <div class="spheres-item item3">
+        <h3 class="sphere__heading">Химия</h3>
+      </div>
+      <div class="spheres-item item4">
+        <h3 class="sphere__heading">География</h3>
+      </div>
+      <div class="spheres-item item5">
+        <h3 class="sphere__heading">Социология</h3>
+      </div>
+      <div class="spheres-item item6">
+        <h3 class="sphere__heading">Информатика</h3>
+      </div>
+      <div class="spheres-item item7">
+        <h3 class="sphere__heading">История</h3>
+      </div>
+      <div class="spheres-item item8">
+        <h3 class="sphere__heading">Экономика</h3>
+      </div>
     </div>
+
+    <button class="spheres-btn">Загрузить еще</button>
+  </div>
 </template>
 
-<style scoped lang="css">
-@font-face {
-    font-family: 'Gilroy';
-    src: local('Gliroy') url('../../assets/fonts/Gilroy-Extrabold.ttf');
-}
-
+<style scoped lang="scss">
 * {
   margin: 0;
   padding: 0;
@@ -52,8 +47,6 @@
 }
 .main__spheres {
   margin-top: 122px;
-  padding-left: 68px;
-  padding-right: 138px;
 }
 
 .spheres__heading {
@@ -65,7 +58,6 @@
   margin-top: 48px;
   display: grid;
 }
-
 
 .spheres-item {
   height: 359px;
@@ -87,7 +79,7 @@
 .item3 {
   grid-row-start: 1;
   grid-row-end: 1;
-  grid-column-start:4;
+  grid-column-start: 4;
   grid-column-end: 5;
   background-color: #d9d9d9;
 }
