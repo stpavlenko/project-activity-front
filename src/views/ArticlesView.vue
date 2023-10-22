@@ -1,8 +1,10 @@
 <script setup>
 import ArticleCard from '@/components/ArticleCard.vue'
+import ProjectBreadcrumb from '@/components/ProjectBreadcrumb.vue'
 </script>
 <template>
   <div class="wrapper">
+    <ProjectBreadcrumb />
     <h2 class="view__title">Биология</h2>
     <div class="row g-5">
       <div class="col-8">
