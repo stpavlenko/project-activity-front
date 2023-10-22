@@ -1,9 +1,19 @@
+<template>
+  <div class="wrapper">
+    <Banner />
+    <NewArticles />
+    <Spheres />
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Banner from '../components/Banner/Banner.vue'
+import NewArticles from '../components/NewArticles/NewArticles.vue'
+import Spheres from '../components/Spheres/Spheres.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped lang="css">
+.main {
+  margin-bottom: 220px;
+}
+</style>

@@ -2,30 +2,25 @@
 import ArticleCard from '@/components/ArticleCard.vue'
 </script>
 <template>
-  <div>
+  <div class="wrapper">
     <h2 class="view__title">Биология</h2>
-    <div class="input-group gap-6">
-      <input
-        type="text"
-        class="form-control view__input"
-        aria-label="Text input with dropdown button"
-        placeholder="Введите запрос"
-      />
-      <button
-        class="btn btn-outline-secondary dropdown-toggle ml-5 view__input"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        По новизне
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider" /></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
+    <div class="row g-5">
+      <div class="col-8">
+        <input
+          type="text"
+          class="view__input form-control"
+          aria-label="Text input with dropdown button"
+          placeholder="Введите запрос"
+        />
+      </div>
+      <div class="col-4">
+        <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
+          <option selected>По новизне</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
     </div>
 
     <div class="sections">
@@ -33,7 +28,7 @@ import ArticleCard from '@/components/ArticleCard.vue'
         <div class="row">
           <ArticleCard class="col" />
           <div class="col d-flex flex-column justify-content-between">
-            <ArticleCard v-for="index in 5" :horizontal="true" />
+            <ArticleCard v-for="index in 5" :horizontal="true" :key="index" />
           </div>
         </div>
       </section>

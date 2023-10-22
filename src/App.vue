@@ -1,34 +1,21 @@
+
+<script setup>
+import ProjectHeader from './components/Header/ProjectHeader.vue'
+import ProjectFooter from './components/Footer/ProjectFooter.vue'
+</script>
+
 <template>
-    <div class="wrapper">
-      <header>
-        <h1>Тут надо хэдер</h1>
-      </header>
-      <RouterView />
-    </div>
-  </template>
-  
-  <style lang="scss">
-  .view {
-    &__title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 4rem;
-    }
-    &__load-btn {
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      font-weight: 900;
-      border: none;
-      border-bottom: 2px solid black;
-      border-radius: 0;
-      padding-inline: 0;
-      margin-top: 3.5rem;
-    }
-    &__input {
-      border-radius: 0;
-      border: 1px solid #1e1e1e;
-      padding: 1rem 2rem;
-    }
+  <ProjectHeader />
+  <RouterView />
+  <ProjectFooter />
+</template>
+
+<style lang="scss">
+.view {
+  &__title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
   }
   
   body {
@@ -40,4 +27,16 @@
     padding-inline: 1rem;
     margin-inline: auto;
   }
-  </style>
+
+  &__submit-btn {
+    background: #1e1e1e;
+    color: #ffffff;
+    font-weight: 700;
+    width: fit-content;
+    border-radius: 0;
+    padding: 1rem 5rem;
+  }
+}
+
+</style>
+
