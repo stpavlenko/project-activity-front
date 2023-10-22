@@ -6,10 +6,12 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
 <template>
   <ProjectHeader />
   <RouterView />
-  <ProjectFooter />
+  <!-- <ProjectFooter /> -->
 </template>
 
 <style lang="scss">
+@import '@/assets/fonts/stylesheet.css';
+
 .view {
   &__title {
     font-size: 2rem;
