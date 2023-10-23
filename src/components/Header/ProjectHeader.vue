@@ -3,10 +3,7 @@
     <div class="wrapper header__content">
       <div class="header__left">
         <RouterLink to="/" class="navigation-link">
-          <img
-            class="header__logo"
-            src="../../assets/images/mospolytech-logo-white 1.svg"
-            alt="logo"
+          <img class="header__logo" src="@/assets/images/mospolytech-logo-white.svg" alt="logo"
         /></RouterLink>
       </div>
 
@@ -57,11 +54,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@font-face {
-  font-family: 'Gilroy';
-  src: local('Gliroy') url('../../assets/fonts/Gilroy-Extrabold.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;

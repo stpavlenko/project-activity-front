@@ -3,29 +3,25 @@
     <div class="footer__content wrapper">
       <div class="footer__top">
         <RouterLink to="/" class="navigation-link">
-          <img
-            class="footer__logo"
-            src="../../assets/images/mospolytech-logo-white 1.svg"
-            alt="logo"
-          />
+          <img class="footer__logo" src="@/assets/images/mospolytech-logo-white.svg" alt="logo" />
         </RouterLink>
 
         <div class="social-media">
           <a href="#">
             <img
-              src="../../assets/images/akar-icons_vk-fill.svg"
+              src="@/assets/images/akar-icons_vk-fill.svg"
               alt="vk icon"
               class="social-media__icon"
           /></a>
           <a href="#"
             ><img
-              src="../../assets/images/akar-icons_tg-fill.svg"
+              src="@/assets/images/akar-icons_tg-fill.svg"
               alt="telegram icon"
               class="social-media__icon"
           /></a>
           <a href="#"
             ><img
-              src="../../assets/images/akar-icons_gmail-fill.svg"
+              src="@/assets/images/akar-icons_gmail-fill.svg"
               alt="gmail icon"
               class="social-media__icon"
           /></a>

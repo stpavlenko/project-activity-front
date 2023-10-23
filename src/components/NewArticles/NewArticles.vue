@@ -62,11 +62,6 @@ export default {
 </template>
 
 <style scoped lang="css">
-@font-face {
-  font-family: 'Gilroy';
-  src: local('Gliroy') url('../../assets/fonts/Gilroy-Extrabold.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;
