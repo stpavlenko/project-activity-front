@@ -30,7 +30,7 @@
               <RouterLink to="/articles" class="navigation-link">Статьи</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/scientiests" class="navigation-link">Учёные</RouterLink>
+              <RouterLink to="/scientist" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
               <RouterLink to="/reg-form" class="navigation-link">Стать участником</RouterLink>

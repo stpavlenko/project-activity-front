@@ -133,6 +133,7 @@ export default {
   align-items: center;
   gap: 16px;
 }
+
 .panel-btn {
   width: 50px;
   height: 50px;
