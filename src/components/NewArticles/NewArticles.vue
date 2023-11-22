@@ -70,7 +70,9 @@ export default {
 }
 
 .main__new-articles {
-  margin-top: 220px;
+  margin-top: 120px;
+  margin-left: 138px;
+  margin-right: 138px;
 }
 
 .new-articles__heading {

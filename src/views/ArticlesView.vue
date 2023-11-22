@@ -1,9 +1,10 @@
 <script setup>
 import ArticleCard from '@/components/ArticleCard.vue'
-// import ProjectBreadcrumb from '@/components/ProjectBreadcrumb.vue'
 </script>
+
 <template>
-  <div class="wrapper">
+  <div class="wrapper articles">
+    <project-breadcrumb />
     <h2 class="view__title">Биология</h2>
     <div class="row g-5">
       <div class="col-8">
@@ -66,6 +67,10 @@ import ArticleCard from '@/components/ArticleCard.vue'
   </div>
 </template>
 <style lang="scss" scoped>
+.articles {
+  padding-top: 2.75rem;
+  padding-bottom: 13.75rem;
+}
 .sections {
   margin-top: 3rem;
   display: flex;
