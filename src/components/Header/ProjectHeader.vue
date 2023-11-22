@@ -2,7 +2,7 @@
   <header class="header">
     <div class="wrapper header__content">
       <div class="header__left">
-        <RouterLink to="/" class="navigation-link">
+        <RouterLink to="/home" class="navigation-link">
           <img class="header__logo" src="@/assets/images/mospolytech-logo-white.svg" alt="logo"
         /></RouterLink>
       </div>
@@ -24,19 +24,19 @@
         <nav class="header__navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <RouterLink to="/articles" class="navigation-link">Статьи</RouterLink>
+              <RouterLink to="/home/articles" class="navigation-link">Статьи</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/scientists" class="navigation-link">Учёные</RouterLink>
+              <RouterLink to="/home/scientist" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/reg-form" class="navigation-link">Стать участником</RouterLink>
+              <RouterLink to="/home/reg-form" class="navigation-link">Стать участником</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/laboratories" class="navigation-link">Лаборатории</RouterLink>
+              <RouterLink to="/home/laboratories" class="navigation-link">Лаборатории</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/grants" class="navigation-link">Гранты</RouterLink>
+              <RouterLink to="/home/grants" class="navigation-link">Гранты</RouterLink>
             </li>
           </ul>
         </nav>

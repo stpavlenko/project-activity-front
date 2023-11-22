@@ -28,9 +28,8 @@ export default {
 .main__banner {
   height: 826px;
   width: 100%;
-  padding-top: 238px;
-  padding-left: 68px;
-  padding-right: 138px;
+  padding-top: 416px;
+  padding-left: 138px;
   background-color: #999;
 }
 
@@ -42,7 +41,7 @@ export default {
 
 .banner__text {
   width: 628px;
-  margin-top: 80px;
+  margin-top: 48px;
   font-size: 16px;
   line-height: 28px;
   color: #fff;
