@@ -1,19 +1,19 @@
 <template>
-  <div class="wrapper">
+  <div class="home">
     <Banner />
     <NewArticles />
-    <Spheres />
+    <PopularArticles />
   </div>
 </template>
 
 <script setup>
 import Banner from '../components/Banner/Banner.vue'
 import NewArticles from '../components/NewArticles/NewArticles.vue'
-import Spheres from '../components/Spheres/Spheres.vue'
+import PopularArticles from '../components/PopularArticles/PopularArticles.vue'
 </script>
 
 <style scoped lang="css">
-.main {
+.home {
   margin-bottom: 220px;
 }
 </style>
