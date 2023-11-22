@@ -32,6 +32,7 @@ const router = createRouter({
       name: 'scientists',
       component: ScientistsView
     }
+    { path: '/laboratory', name: 'laboratory', component: LaboratoryView }
   ]
 })
 
