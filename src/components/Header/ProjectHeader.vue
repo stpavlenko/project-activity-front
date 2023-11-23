@@ -24,20 +24,27 @@
         <nav class="header__navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <RouterLink to="/home/articles" class="navigation-link">Статьи</RouterLink>
+              <RouterLink :to="{ name: 'sciFiMain' }" class="navigation-link"> Научпоп </RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/home/scientist" class="navigation-link">Учёные</RouterLink>
+              <RouterLink :to="{ name: 'articles' }" class="navigation-link">Статьи</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/home/reg-form" class="navigation-link">Стать участником</RouterLink>
+              <RouterLink :to="{ name: 'scientist' }" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/home/laboratories" class="navigation-link">Лаборатории</RouterLink>
+              <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">
+                Стать участником
+              </RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink to="/home/grants" class="navigation-link">Гранты</RouterLink>
+              <RouterLink :to="{ name: 'laboratories' }" class="navigation-link">
+                Лаборатории
+              </RouterLink>
             </li>
+            <!-- <li class="navigation-item">
+              <RouterLink :to="{ name: 'grants' }" class="navigation-link">Гранты</RouterLink>
+            </li> -->
           </ul>
         </nav>
       </div>

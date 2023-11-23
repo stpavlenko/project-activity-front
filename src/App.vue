@@ -12,9 +12,14 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
 <style lang="scss">
 @import '@/assets/fonts/stylesheet.css';
 
+.router-link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
 .view {
   &__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 4rem;
   }
@@ -40,6 +45,12 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     width: fit-content;
     border-radius: 0;
     padding: 1rem 5rem;
+  }
+  &__date {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #c2c2c2;
   }
 }
 

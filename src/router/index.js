@@ -9,15 +9,27 @@ const router = createRouter({
   routes: [
     {
       path: '/home',
-      name: 'home',
       meta: {
         breadcrumb: 'Главная'
       },
       children: [
         {
           path: '',
-          name: 'Home',
+          name: 'home',
           component: () => import('@/views/HomeView.vue')
+        },
+        {
+          path: 'sci-fi',
+          meta: {
+            breadcrumb: 'Научно-популярные проекты'
+          },
+          children: [
+            {
+              path: '',
+              name: 'sciFiMain',
+              component: import('@/views/SciFiMainView.vue')
+            }
+          ]
         },
         {
           path: 'articles',
@@ -35,7 +47,22 @@ const router = createRouter({
             breadcrumb: 'Ученые'
           }
         },
-        { path: '/reg-form', name: 'reg-form', component: FormView }
+        {
+          path: 'laboratories',
+          name: 'laboratories',
+          // component: import('@/views/ScientistView.vue'),
+          meta: {
+            breadcrumb: 'Лаборатории'
+          }
+        },
+        {
+          path: 'reg-form',
+          name: 'reg-form',
+          component: FormView,
+          meta: {
+            breadcrumb: 'Стать участником'
+          }
+        }
       ]
     },
 

@@ -20,7 +20,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
         :class="{ 'article-card__image--horizontal': horizontal }"
       ></div>
       <div class="article-card__text-content d-flex flex-column">
-        <time class="article-card__date">{{ date }}</time>
+        <time class="view__date">{{ date }}</time>
         <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
           {{ horizontal ? smallTitle : title }}
         </span>

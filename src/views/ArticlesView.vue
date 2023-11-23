@@ -71,6 +71,9 @@ import ArticleCard from '@/components/ArticleCard.vue'
   padding-top: 2.75rem;
   padding-bottom: 13.75rem;
 }
+.view__title {
+  margin-top: 2.75rem;
+}
 .sections {
   margin-top: 3rem;
   display: flex;

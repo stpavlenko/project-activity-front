@@ -1,12 +1,12 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useRouter } from 'vue-router'
 
 const route = useRoute()
 
 const matchedRoutes = computed(() => route.matched)
 </script>
+
 <template>
   <nav style="--bs-breadcrumb-divider: '-'" aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -16,6 +16,7 @@ const matchedRoutes = computed(() => route.matched)
     </ol>
   </nav>
 </template>
+
 <style lang="scss" scoped>
 @use '@/assets/style/variables' as *;
 .breadcrumb {
@@ -25,5 +26,6 @@ const matchedRoutes = computed(() => route.matched)
   color: $text-primary;
   font-size: 0.75rem;
   font-weight: 800;
+  margin-bottom: 0;
 }
 </style>
