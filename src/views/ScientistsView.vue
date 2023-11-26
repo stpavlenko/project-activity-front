@@ -24,9 +24,10 @@
       <div class="row">
         <ScientistCard class="col" v-for="index in 3" />
       </div>
+      
+    <button type="button" class="btn view__load-btn">Загрузить еще</button>
     </div>
 
-    <button type="button" class="btn view__load-btn">Загрузить еще</button>
   </div>
 </template>
 

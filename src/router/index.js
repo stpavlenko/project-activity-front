@@ -40,17 +40,25 @@ const router = createRouter({
           }
         },
         {
-          path: 'scientist',
-          name: 'scientist',
-          component: import('@/views/ScientistView.vue'),
+          path: 'scientists',
+          name: 'scientists',
+          component: import('@/views/ScientistsView.vue'),
           meta: {
             breadcrumb: 'Ученые'
           }
         },
         {
+          path: 'scientist',
+          name: 'scientist',
+          component: import('@/views/ScientistView.vue'),
+          meta: {
+            breadcrumb: 'Ученый'
+          }
+        },
+        {
           path: 'laboratories',
           name: 'laboratories',
-          // component: import('@/views/ScientistView.vue'),
+          component: import('@/views/LaboratoriesView.vue'),
           meta: {
             breadcrumb: 'Лаборатории'
           }
