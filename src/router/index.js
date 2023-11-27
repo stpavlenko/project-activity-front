@@ -40,30 +40,34 @@ const router = createRouter({
         },
         {
           path: 'articles',
-          name: 'articles',
-          component: () => import('@/views/ArticlesView.vue'),
           meta: {
             breadcrumb: 'Статьи'
           },
-          // children: [
-          //   {
-          //     path: 'id',
-          //     name: 'article',
-          //     component: import('@/views/ArticleView.vue'),
-          //     meta: {
-          //       breadcrumb: 'Статья'
-          //     }
-          //   }
-          // ]
+          children: [
+            {
+              component: () => import('@/views/ArticlesView.vue'),
+              path: '',
+              name: 'articles',
+
+            },
+            {
+              path: 'article',
+              name: 'article',
+              component: ()=>import('@/views/ArticleView.vue'),
+              meta: {
+                breadcrumb: 'Статья'
+              }
+            }
+          ]
         },
-        {
-          path: 'articles/article',
-          name: 'article',
-          component: import('@/views/ArticleView.vue'),
-          meta: {
-            breadcrumb: 'Статья'
-          }
-        },
+        // {
+        //   path: 'articles/article',
+        //   name: 'article',
+        //   component: import('@/views/ArticleView.vue'),
+        //   meta: {
+        //     breadcrumb: 'Статья'
+        //   }
+        // },
         {
           path: 'scientists',
           name: 'scientists',
