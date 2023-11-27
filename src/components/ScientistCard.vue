@@ -2,23 +2,20 @@
 // defineProps({
 //   horizontal: Boolean
 // })
-const title =
-  'Фамилия Имя Отчество'
+const title = 'Фамилия Имя Отчество'
 const text =
   'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu. '
 </script>
 <template>
   <div>
-    <div
-      class="d-flex scientist-card flex-column"
-    >
-      <div
-        class="scientist-card__image"
-      ></div>
+    <div class="d-flex scientist-card flex-column">
+      <div class="scientist-card__image"></div>
       <div class="scientist-card__text-content d-flex flex-column">
-        <span class="scientist-card__title">
-          {{ title }}
-        </span>
+        <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
+          ><span class="scientist-card__title">
+            {{ title }}
+          </span></RouterLink
+        >
         <p class="scientist-card__text">{{ text }}</p>
       </div>
     </div>

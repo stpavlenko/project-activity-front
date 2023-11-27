@@ -30,7 +30,7 @@
               <RouterLink :to="{ name: 'articles' }" class="navigation-link">Статьи</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'scientist' }" class="navigation-link">Учёные</RouterLink>
+              <RouterLink :to="{ name: 'scientists' }" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
               <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">

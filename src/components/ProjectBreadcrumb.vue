@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const matchedRoutes = computed(() => route.matched)
+console.log(matchedRoutes.value);
 </script>
 
 <template>
