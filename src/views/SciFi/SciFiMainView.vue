@@ -8,7 +8,7 @@ import SciFiPreview from '@/components/SciFi/SciFiPreview.vue'
     <h2 class="view__title">Научно-популярные проекты</h2>
 
     <div class="previews">
-      <SciFiPreview v-for="i in 2" :key="i" class="preview" />
+      <SciFiPreview v-for="i in 2" :key="i" :id="i" class="preview" />
     </div>
 
     <button type="button" class="btn view__load-btn">Загрузить еще</button>
