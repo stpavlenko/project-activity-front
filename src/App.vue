@@ -21,6 +21,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
   &__title {
     font-size: 2.5rem;
     font-weight: 800;
+    margin-top: 2.75rem;
     margin-bottom: 4rem;
   }
   &__load-btn {
@@ -62,5 +63,9 @@ body {
   max-width: calc(1150px + 2rem);
   padding-inline: 1rem;
   margin-inline: auto;
+  &--default-m {
+    margin-bottom: 13.75rem;
+    margin-top: 2.75rem;
+  }
 }
 </style>

@@ -27,14 +27,21 @@ const router = createRouter({
             {
               path: '',
               name: 'sciFiMain',
-              component: import('@/views/SciFiMainView.vue')
+              component: () => import('@/views/SciFi/SciFiMainView.vue')
+            },
+            {
+              path: ':id',
+              name: 'sciFiView',
+              props: true,
+              component: () => import('@/views/SciFi/SciFiView.vue'),
+              meta: (route) => ({ breadcrumb: route.params.id })
             }
           ]
         },
         {
           path: 'articles',
           name: 'articles',
-          component: import('@/views/ArticlesView.vue'),
+          component: () => import('@/views/ArticlesView.vue'),
           meta: {
             breadcrumb: 'Статьи'
           }
@@ -42,7 +49,7 @@ const router = createRouter({
         {
           path: 'scientist',
           name: 'scientist',
-          component: import('@/views/ScientistView.vue'),
+          component: () => import('@/views/ScientistView.vue'),
           meta: {
             breadcrumb: 'Ученые'
           }
@@ -50,7 +57,7 @@ const router = createRouter({
         {
           path: 'laboratories',
           name: 'laboratories',
-          // component: import('@/views/ScientistView.vue'),
+          // component: () => import('@/views/ScientistView.vue'),
           meta: {
             breadcrumb: 'Лаборатории'
           }

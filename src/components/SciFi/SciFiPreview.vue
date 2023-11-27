@@ -1,9 +1,17 @@
 <script setup>
 import SciFiVideo from '@/components/SciFi/SciFiVideo.vue'
+
+defineProps({
+  id: String
+})
 </script>
 <template>
   <div>
-    <h3><router-link to="/" class="router-link-reset">Научная кухня</router-link></h3>
+    <h3>
+      <router-link :to="{ name: 'sciFiView', params: { id: id } }" class="router-link-reset">
+        Научная кухня
+      </router-link>
+    </h3>
     <p>
       Московский политехнический университет приглашает молодых ученых (постдоков) в возрасте до 39
       лет участвовать в конкурсном отборе на получение грантов имени П.Л. Капицы. Конкурс
