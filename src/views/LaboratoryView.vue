@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="laboratory">
+    <div class="wrapper laboratory">
         <h1 class="laboratory__heading">Название лаборатории</h1>
 
         <video class="laboratory__video">
@@ -112,11 +112,16 @@
 </template>
 
 <style scoped>
-.laboratory {
+/* .laboratory {
     margin-left: 136px;
     margin-right: 136px;
     margin-top: 40px;
     margin-bottom: 220px;
+} */
+
+.wrapper {
+  margin-top: 2.75rem;
+  margin-bottom: 13.75rem;
 }
 
 .laboratory__heading {

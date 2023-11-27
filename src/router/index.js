@@ -37,6 +37,24 @@ const router = createRouter({
           component: import('@/views/ArticlesView.vue'),
           meta: {
             breadcrumb: 'Статьи'
+          },
+          // children: [
+          //   {
+          //     path: 'id',
+          //     name: 'article',
+          //     component: import('@/views/ArticleView.vue'),
+          //     meta: {
+          //       breadcrumb: 'Статья'
+          //     }
+          //   }
+          // ]
+        },
+        {
+          path: 'articles/article',
+          name: 'article',
+          component: import('@/views/ArticleView.vue'),
+          meta: {
+            breadcrumb: 'Статья'
           }
         },
         {
@@ -74,12 +92,19 @@ const router = createRouter({
       ]
     },
 
+    // {
+    //   path: '/scientists',
+    //   name: 'scientists',
+    //   component: ScientistsView
+    // },
     {
-      path: '/scientists',
-      name: 'scientists',
-      component: ScientistsView
-    },
-    { path: '/laboratory', name: 'laboratory', component: LaboratoryView }
+      path: '/laboratory',
+      name: 'laboratory',
+      component: LaboratoryView,
+      meta: {
+        breadcrumb: 'Лаборатория'
+      }
+    }
   ]
 })
 
