@@ -111,7 +111,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .laboratory {
     margin-left: 136px;
     margin-right: 136px;
