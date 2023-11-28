@@ -40,12 +40,34 @@ const router = createRouter({
         },
         {
           path: 'articles',
-          name: 'articles',
-          component: () => import('@/views/ArticlesView.vue'),
           meta: {
             breadcrumb: 'Статьи'
-          }
+          },
+          children: [
+            {
+              component: () => import('@/views/ArticlesView.vue'),
+              path: '',
+              name: 'articles',
+
+            },
+            {
+              path: 'article',
+              name: 'article',
+              component: ()=>import('@/views/ArticleView.vue'),
+              meta: {
+                breadcrumb: 'Статья'
+              }
+            }
+          ]
         },
+        // {
+        //   path: 'articles/article',
+        //   name: 'article',
+        //   component: import('@/views/ArticleView.vue'),
+        //   meta: {
+        //     breadcrumb: 'Статья'
+        //   }
+        // },
         {
           path: 'scientists',
           name: 'scientists',
@@ -81,12 +103,19 @@ const router = createRouter({
       ]
     },
 
+    // {
+    //   path: '/scientists',
+    //   name: 'scientists',
+    //   component: ScientistsView
+    // },
     {
-      path: '/scientists',
-      name: 'scientists',
-      component: ScientistsView
-    },
-    { path: '/laboratory', name: 'laboratory', component: LaboratoryView }
+      path: '/laboratory',
+      name: 'laboratory',
+      component: LaboratoryView,
+      meta: {
+        breadcrumb: 'Лаборатория'
+      }
+    }
   ]
 })
 
