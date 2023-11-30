@@ -1,8 +1,8 @@
 <script></script>
 
 <template>
-  <div class="laboratory">
-    <h1 class="laboratory__heading">Название лаборатории</h1>
+    <div class="wrapper laboratory">
+        <h1 class="laboratory__heading">Название лаборатории</h1>
 
     <video class="laboratory__video">
       <!-- <source src="video.mp4" type="video/mp4"> rollup ругается, кривой источник -->
@@ -129,11 +129,16 @@
 </template>
 
 <style scoped>
-.laboratory {
-  margin-left: 136px;
-  margin-right: 136px;
-  margin-top: 40px;
-  margin-bottom: 220px;
+/* .laboratory {
+    margin-left: 136px;
+    margin-right: 136px;
+    margin-top: 40px;
+    margin-bottom: 220px;
+} */
+
+.wrapper {
+  margin-top: 2.75rem;
+  margin-bottom: 13.75rem;
 }
 
 .laboratory__heading {

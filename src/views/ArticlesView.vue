@@ -5,7 +5,8 @@ import ArticleCard from '@/components/ArticleCard.vue'
 <template>
   <div class="wrapper articles">
     <project-breadcrumb />
-    <h2 class="view__title">Биология</h2>
+    <RouterLink class="router-link-reset" :to="{ name: 'article' }"><h2 class="view__title">Биология</h2></RouterLink>
+    
     <div class="row g-5">
       <div class="col-8">
         <input
