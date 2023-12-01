@@ -36,11 +36,6 @@
               <RouterLink :to="{ name: 'sno' }" class="navigation-link">СНО</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">
-                Стать участником
-              </RouterLink>
-            </li>
-            <li class="navigation-item">
               <RouterLink :to="{ name: 'laboratories' }" class="navigation-link">
                 Лаборатории
               </RouterLink>
