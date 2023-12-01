@@ -99,6 +99,14 @@ const router = createRouter({
           meta: {
             breadcrumb: 'Стать участником'
           }
+        },
+        {
+          path: 'sno',
+          name: 'sno',
+          component: () => import('@/views/SnoView.vue'),
+          meta: {
+            breadcrumb: 'Студенческое научное общество'
+          }
         }
       ]
     },
