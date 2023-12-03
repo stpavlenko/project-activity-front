@@ -2,7 +2,7 @@
   <header class="header">
     <div class="wrapper header__content">
       <div class="header__left">
-        <RouterLink to="/home" class="navigation-link">
+        <RouterLink :to="{ name: 'home' }" class="navigation-link">
           <img class="header__logo" src="@/assets/images/mospolytech-logo-white.svg" alt="logo"
         /></RouterLink>
       </div>
@@ -24,7 +24,7 @@
         <nav class="header__navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'sciFiMain' }" class="navigation-link"> Научпоп </RouterLink>
+              <RouterLink :to="{ name: 'sciFiMain' }" class="navigation-link">Научпоп</RouterLink>
             </li>
             <li class="navigation-item">
               <RouterLink :to="{ name: 'articles' }" class="navigation-link">Статьи</RouterLink>
@@ -33,17 +33,20 @@
               <RouterLink :to="{ name: 'scientists' }" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">
-                Стать участником
-              </RouterLink>
+              <RouterLink :to="{ name: 'scientists' }" class="navigation-link">СНО</RouterLink>
             </li>
             <li class="navigation-item">
               <RouterLink :to="{ name: 'laboratories' }" class="navigation-link">
                 Лаборатории
               </RouterLink>
             </li>
+            <li class="navigation-item">
+              <RouterLink :to="{ name: 'home' }" class="navigation-link">Научные гранты</RouterLink>
+            </li>
             <!-- <li class="navigation-item">
-              <RouterLink :to="{ name: 'grants' }" class="navigation-link">Гранты</RouterLink>
+              <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">
+                Стать участником
+              </RouterLink>
             </li> -->
           </ul>
         </nav>
@@ -65,8 +68,6 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gilroy', 'sans-serif';
-  font-weight: 900;
 }
 .header {
   background-color: rgb(30, 30, 30);
@@ -99,6 +100,10 @@ export default {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 800; //????
+  line-height: normal;
+  letter-spacing: 1.4px;
 }
 
 @media (max-width: 1020px) {

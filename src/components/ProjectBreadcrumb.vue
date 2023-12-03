@@ -3,7 +3,6 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-console.log(route.matched)
 const matchedRoutes = computed(() => route.matched.filter((route) => route.meta?.breadcrumb))
 </script>
 

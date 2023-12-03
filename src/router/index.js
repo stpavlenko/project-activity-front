@@ -8,7 +8,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
+      path: '/',
       meta: {
         breadcrumb: 'Главная'
       },
@@ -47,13 +47,12 @@ const router = createRouter({
             {
               component: () => import('@/views/ArticlesView.vue'),
               path: '',
-              name: 'articles',
-
+              name: 'articles'
             },
             {
               path: 'article',
               name: 'article',
-              component: ()=>import('@/views/ArticleView.vue'),
+              component: () => import('@/views/ArticleView.vue'),
               meta: {
                 breadcrumb: 'Статья'
               }
