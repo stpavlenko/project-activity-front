@@ -33,7 +33,7 @@
               <RouterLink :to="{ name: 'scientists' }" class="navigation-link">Учёные</RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'scientists' }" class="navigation-link">СНО</RouterLink>
+              <RouterLink :to="{ name: 'sno' }" class="navigation-link">СНО</RouterLink>
             </li>
             <li class="navigation-item">
               <RouterLink :to="{ name: 'laboratories' }" class="navigation-link">
