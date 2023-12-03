@@ -47,6 +47,20 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     border-radius: 0;
     padding: 1rem 5rem;
   }
+  &__link-btn {
+    display: flex;
+    flex-flow: row;
+    gap: 32px;
+    align-items: center;
+    border-radius: 0;
+    color: #1e1e1e;
+    background: #eeeeee;
+    width: fit-content;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 175%;
+    padding: 1.438rem 2rem;
+  }
   &__date {
     text-transform: uppercase;
     font-size: 0.75rem;

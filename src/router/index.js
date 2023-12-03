@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import FormView from '@/views/FormView.vue'
-import ScientistsView from '@/views/ScientistsView.vue'
 import LaboratoryView from '@/views/LaboratoryView.vue'
 
 const router = createRouter({
@@ -97,6 +96,14 @@ const router = createRouter({
           component: FormView,
           meta: {
             breadcrumb: 'Стать участником'
+          }
+        },
+        {
+          path: 'sno',
+          name: 'sno',
+          component: () => import('@/views/SnoView.vue'),
+          meta: {
+            breadcrumb: 'Студенческое научное общество'
           }
         }
       ]
