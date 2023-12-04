@@ -1,7 +1,4 @@
-<script>
-export default {
-  name: 'ScientistInfo'
-}
+<script setup>
 </script>
 
 <template>

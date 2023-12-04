@@ -41,7 +41,7 @@
               </RouterLink>
             </li>
             <li class="navigation-item">
-              <RouterLink :to="{ name: 'home' }" class="navigation-link">Научные гранты</RouterLink>
+              <RouterLink :to="{ name: 'grants' }" class="navigation-link">Научные гранты</RouterLink>
             </li>
             <!-- <li class="navigation-item">
               <RouterLink :to="{ name: 'reg-form' }" class="navigation-link">

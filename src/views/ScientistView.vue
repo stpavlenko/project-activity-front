@@ -1,10 +1,6 @@
-<script>
+<script setup>
 import ScientistPreview from '../components/ScientistPreview.vue'
 import ScientistInfo from '../components/ScientistInfo.vue'
-export default {
-  name: 'ScientistView',
-  components: { ScientistPreview, ScientistInfo }
-}
 </script>
 
 <template>
