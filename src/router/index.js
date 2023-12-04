@@ -105,6 +105,14 @@ const router = createRouter({
           meta: {
             breadcrumb: 'Студенческое научное общество'
           }
+        },
+        {
+          path: 'grants',
+          name: 'grants',
+          component: () => import('@/views/GrantsView.vue'),
+          meta: {
+            breadcrumb: 'Гранты'
+          }
         }
       ]
     },
