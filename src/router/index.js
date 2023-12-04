@@ -47,27 +47,18 @@ const router = createRouter({
             {
               component: () => import('@/views/ArticlesView.vue'),
               path: '',
-              name: 'articles',
-
+              name: 'articles'
             },
             {
               path: 'article',
               name: 'article',
-              component: ()=>import('@/views/ArticleView.vue'),
+              component: () => import('@/views/ArticleView.vue'),
               meta: {
                 breadcrumb: 'Статья'
               }
             }
           ]
         },
-        // {
-        //   path: 'articles/article',
-        //   name: 'article',
-        //   component: import('@/views/ArticleView.vue'),
-        //   meta: {
-        //     breadcrumb: 'Статья'
-        //   }
-        // },
         {
           path: 'scientists',
           name: 'scientists',
