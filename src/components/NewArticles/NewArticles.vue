@@ -28,6 +28,28 @@ export default {
       <div class="panel__btns">
         <button class="panel-btn">
           <svg
+            width="53"
+            height="52"
+            viewBox="0 0 53 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="26.1274"
+              cy="26"
+              r="25.5"
+              transform="rotate(-180 26.1274 26)"
+              stroke="currentColor"
+              stroke-opacity="0.5"
+            />
+            <path
+              d="M36.1279 26.4167L17.7946 26.4167M17.7946 26.4167L21.9613 31M17.7946 26.4167L21.9613 21.8333"
+              stroke="currentColor"
+              stroke-opacity="0.5"
+              stroke-width="2"
+            />
+          </svg>
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -36,13 +58,14 @@ export default {
             viewBox="0 0 16 16"
           >
             <path
+              opacity="0.5"
               fill-rule="evenodd"
               d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
             />
-          </svg>
+          </svg> -->
         </button>
         <button class="panel-btn">
-          <svg
+          <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="50"
@@ -53,6 +76,20 @@ export default {
             <path
               fill-rule="evenodd"
               d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+            />
+          </svg> -->
+          <svg
+            width="53"
+            height="52"
+            viewBox="0 0 53 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="26.1274" cy="26" r="25.5" stroke="#1E1E1E" />
+            <path
+              d="M16.127 25.5833H34.4603M34.4603 25.5833L30.2936 21M34.4603 25.5833L30.2936 30.1667"
+              stroke="currentColor"
+              stroke-width="2"
             />
           </svg>
         </button>
