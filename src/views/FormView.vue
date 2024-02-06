@@ -6,34 +6,26 @@ const radioChecked = ref('show')
 
 <template>
   <div class="wrapper">
-    <h2 class="view__title">Стать участником</h2>
+    <project-breadcrumb />
+    <h2 class="view__title">Стать участником Студенческого научного общества</h2>
     <div class="form__wrapper">
-      <section class="row g-3">
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Фамилия" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Имя" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Отчество" />
-        </div>
-        <div class="col-8">
-          <input type="text" class="form-control view__input" placeholder="Факультет/ Институт" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Группа" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Гражданство" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Контактный телефон" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control view__input" placeholder="Электронная почта" />
-        </div>
+      <section class="section">
+        <input type="text" class="form-control view__input" placeholder="Фамилия" />
+        <input type="text" class="form-control view__input" placeholder="Имя" />
+        <input type="text" class="form-control view__input" placeholder="Отчество" />
       </section>
+
+      <section class="section">
+        <input type="text" class="form-control view__input" placeholder="Факультет/ Институт" />
+        <input type="text" class="form-control view__input" placeholder="Группа" />
+      </section>
+
+      <section class="section">
+        <input type="text" class="form-control view__input" placeholder="Гражданство" />
+        <input type="text" class="form-control view__input" placeholder="Контактный телефон" />
+        <input type="text" class="form-control view__input" placeholder="Электронная почта" />
+      </section>
+
       <section class="section">
         <label for="commentary" class="form-label">Сфера интересов</label>
         <textarea
@@ -44,6 +36,7 @@ const radioChecked = ref('show')
           style="resize: none"
         />
       </section>
+
       <section class="section">
         <label for="skills" class="form-label">Навыки и умения</label>
         <textarea
@@ -54,6 +47,7 @@ const radioChecked = ref('show')
           style="resize: none"
         />
       </section>
+
       <section class="section">
         <label for="experience" class="form-label">
           Наличие опыта в организации и проведении мероприятий
@@ -91,18 +85,27 @@ const radioChecked = ref('show')
           style="resize: none"
         />
       </section>
+
       <button type="button" class="btn view__submit-btn align-self-end">Отправить заявку</button>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.wrapper {
+  margin-top: 2.75rem;
+  margin-bottom: 13.75rem;
+}
+
 .form__wrapper {
+  box-sizing: content-box;
   border: 1px solid #1e1e1e;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.5rem;
   display: flex;
+  margin: 0 auto;
+  max-width: 504px;
   flex-flow: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .form-label {
@@ -112,6 +115,6 @@ const radioChecked = ref('show')
 .section {
   display: flex;
   flex-flow: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 </style>

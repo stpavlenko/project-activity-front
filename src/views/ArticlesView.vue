@@ -1,12 +1,16 @@
 <script setup>
 import ArticleCard from '@/components/ArticleCard.vue'
+
+function smallArticle(index) {
+  return [2, 3, 4, 5].includes(index)
+}
 </script>
 
 <template>
   <div class="wrapper articles">
     <project-breadcrumb />
-    <RouterLink class="router-link-reset" :to="{ name: 'article' }"><h2 class="view__title">Биология</h2></RouterLink>
-    
+    <h2 class="view__title">Статьи</h2>
+
     <div class="row g-5">
       <div class="col-8">
         <input
@@ -26,43 +30,15 @@ import ArticleCard from '@/components/ArticleCard.vue'
       </div>
     </div>
 
-    <div class="sections">
-      <section>
-        <div class="row">
-          <ArticleCard class="col" />
-          <div class="col d-flex flex-column justify-content-between">
-            <ArticleCard v-for="index in 5" :horizontal="true" :key="index" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="row">
-          <ArticleCard class="col" v-for="index in 3" />
-        </div>
-      </section>
-
-      <section>
-        <div class="row">
-          <ArticleCard class="col" v-for="index in 2" />
-        </div>
-      </section>
-
-      <section>
-        <div class="row">
-          <div class="col d-flex flex-column justify-content-between">
-            <ArticleCard v-for="index in 5" :horizontal="true" />
-          </div>
-          <ArticleCard class="col" />
-        </div>
-      </section>
-
-      <section>
-        <div class="row">
-          <ArticleCard class="col" v-for="index in 3" />
-        </div>
-      </section>
-    </div>
+    <section class="articles__content">
+      <ArticleCard
+        v-for="index in 13"
+        :key="index"
+        :horizontal="smallArticle(index)"
+        :class="{ 'article--small': smallArticle(index) }"
+        class="article"
+      />
+    </section>
 
     <button type="button" class="btn view__load-btn">Загрузить еще</button>
   </div>
@@ -75,10 +51,18 @@ import ArticleCard from '@/components/ArticleCard.vue'
 .view__title {
   margin-top: 2.75rem;
 }
-.sections {
+.articles__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 7.875rem;
+  gap: 2.5rem;
+}
+
+.article {
+  grid-row: span 4;
+  &--small {
+    grid-row: span 1;
+  }
 }
 </style>

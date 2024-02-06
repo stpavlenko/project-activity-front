@@ -21,9 +21,11 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
       ></div>
       <div class="article-card__text-content d-flex flex-column">
         <time class="view__date">{{ date }}</time>
-        <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
-          {{ horizontal ? smallTitle : title }}
-        </span>
+        <router-link :to="{ name: 'article' }" class="router-link-reset">
+          <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
+            {{ horizontal ? smallTitle : title }}
+          </span>
+        </router-link>
         <p class="article-card__text" v-if="!horizontal">{{ text }}</p>
       </div>
     </div>
