@@ -6,7 +6,9 @@ defineProps({
 </script>
 <template>
   <div>
-    <div class="sci-fi__img"></div>
+    <router-link :to="{ name: routerName }" class="router-link-reset">
+      <div class="sci-fi__img"></div>
+    </router-link>
     <h3 class="mt-4">
       <router-link :to="{ name: routerName }" class="router-link-reset">
         {{ label }}
