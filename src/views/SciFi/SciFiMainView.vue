@@ -1,17 +1,23 @@
 <script setup>
 import SciFiPreview from '@/components/SciFi/SciFiPreview.vue'
+
+const projects = [
+  { label: 'Научная кухня', routerName: 'sciKitchen' },
+  { label: 'Вопросы ученым', routerName: 'home' }
+]
 </script>
 
 <template>
   <div class="wrapper">
     <project-breadcrumb />
     <h2 class="view__title">Научно-популярные проекты</h2>
+    <input type="text" class="view__input form-control" />
 
-    <div class="previews">
-      <SciFiPreview v-for="i in 2" :key="i" :id="i" class="preview" />
+    <div class="row mt-5">
+      <div class="col" v-for="project in projects" :key="project.routerName">
+        <SciFiPreview :label="project.label" :routerName="project.routerName"></SciFiPreview>
+      </div>
     </div>
-
-    <button type="button" class="btn view__load-btn">Загрузить еще</button>
   </div>
 </template>
 

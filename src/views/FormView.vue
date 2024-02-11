@@ -86,7 +86,9 @@ const radioChecked = ref('show')
         />
       </section>
 
-      <button type="button" class="btn view__submit-btn align-self-end">Отправить заявку</button>
+      <button type="button" class="btn view__submit-btn align-self-end w-100">
+        Отправить заявку
+      </button>
     </div>
   </div>
 </template>
