@@ -58,14 +58,6 @@ const router = createRouter({
             }
           ]
         },
-        // {
-        //   path: 'articles/article',
-        //   name: 'article',
-        //   component: import('@/views/ArticleView.vue'),
-        //   meta: {
-        //     breadcrumb: 'Статья'
-        //   }
-        // },
         {
           path: 'scientists',
           name: 'scientists',

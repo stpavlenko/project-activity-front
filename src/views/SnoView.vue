@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+import SnoGallery from '../components/SnoGallery.vue';</script>
 <template>
   <div class="wrapper">
     <project-breadcrumb />
@@ -12,6 +13,14 @@
             интересующихся наукой, технологическим предпринимательством, популяризацией научной и
             инновационной деятельности, и рассказывает о науке просто.
           </p>
+          <div><span>Задачи Студенческого научного общества:</span>
+          <ul>
+            <li>участие и организация студенческих научных мероприятий</li>
+            <li>организация научно-популярных мероприятий</li>
+            <li>ведение научно-популярной проектной деятельности</li>
+            <li>сотрудничество со СНО других ВУЗов</li>
+          </ul></div>
+          
           <p class="sno__text">Присоединяйся к нам, наука – это интересно!</p>
           <RouterLink class="link" :to="{ name: 'reg-form' }">
             <button type="button" class="view__load-btn btn">
@@ -24,8 +33,9 @@
           <figcaption class="sno__image__caption">Председатель СНО - Александр Глинин</figcaption>
         </figure>
       </section>
+      <SnoGallery></SnoGallery>
       <button type="button" class="view__link-btn btn">
-        <img src="@/assets/images/paperclip.png" alt="paperclip" />Положение о системе отбора
+        <img src="@/assets/images/paperclip.png" alt="paperclip" />Положение о Студенческом научном обществе
       </button>
       <section class="contacts">
         <h3 class="contacts__title">Контакты</h3>
@@ -128,6 +138,7 @@
   &__text {
     margin: 0;
   }
+
 
   &__image {
     width: 400px;
