@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import FormView from '@/views/FormView.vue'
 import LaboratoryView from '@/views/LaboratoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -29,11 +31,10 @@ const router = createRouter({
               component: () => import('@/views/SciFi/SciFiMainView.vue')
             },
             {
-              path: ':id',
-              name: 'sciFiView',
-              props: true,
-              component: () => import('@/views/SciFi/SciFiView.vue'),
-              meta: (route) => ({ breadcrumb: route.params.id })
+              path: 'sci-fi-kitchen',
+              name: 'sciKitchen',
+              component: () => import('@/views/SciFi/SciKitchenView.vue'),
+              meta: { breadcrumb: 'Научная кухня' }
             }
           ]
         },
@@ -82,21 +83,27 @@ const router = createRouter({
             breadcrumb: 'Лаборатории'
           }
         },
-        {
-          path: 'reg-form',
-          name: 'reg-form',
-          component: FormView,
-          meta: {
-            breadcrumb: 'Стать участником'
-          }
-        },
+
         {
           path: 'sno',
-          name: 'sno',
-          component: () => import('@/views/SnoView.vue'),
           meta: {
-            breadcrumb: 'Студенческое научное общество'
-          }
+            breadcrumb: 'СНО'
+          },
+          children: [
+            {
+              name: 'sno',
+              path: '',
+              component: () => import('@/views/SnoView.vue')
+            },
+            {
+              path: 'reg-form',
+              name: 'reg-form',
+              component: () => import('@/views/FormView.vue'),
+              meta: {
+                breadcrumb: 'Стать участником'
+              }
+            }
+          ]
         },
         {
           path: 'grants',

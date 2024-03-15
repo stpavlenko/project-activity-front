@@ -1,5 +1,5 @@
 <template>
-  <div class="video">
+  <div class="video mt-3">
     <div class="video__plug"></div>
     <h4 class="video__title">Название</h4>
     <div class="view__date">20 ноября 2023</div>

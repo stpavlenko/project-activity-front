@@ -8,7 +8,7 @@ defineProps({
 <template>
   <div class="wrapper wrapper--default-m">
     <project-breadcrumb />
-    <h2 class="view__title">{{ id }}</h2>
+    <h2 class="view__title">Научная кухня</h2>
     <p class="sci-fi__details">
       /что-то о проекте/ С мая 2013 по сентябрь 2015 год – и.о. ректора Федерального
       государственного бюджетного образовательного учреждения высшего профессионального образования
