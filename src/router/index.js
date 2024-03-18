@@ -107,12 +107,26 @@ const router = createRouter({
         },
         {
           path: 'grants',
-          name: 'grants',
-          component: () => import('@/views/GrantsView.vue'),
           meta: {
             breadcrumb: 'Гранты'
-          }
-        }
+          },
+          children: [
+            {
+              path:'',
+              name: 'grants',
+              component: () => import('@/views/GrantsView.vue'),
+            },
+            {
+              path: 'grant',
+              name: 'grant',
+              component: () => import('@/views/GrantView.vue'),
+              meta: {
+                breadcrumb: 'Грант'
+              }
+            }
+          ]
+        },
+
       ]
     },
 
