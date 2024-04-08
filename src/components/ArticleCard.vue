@@ -13,13 +13,17 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   <div>
     <div
       class="d-flex article-card"
-      :class="{ 'flex-row': horizontal, 'flex-column': !horizontal }"
+      :class="{ 'article-card--horizontal': horizontal, 'flex-column': !horizontal }"
     >
-      <div
-        class="article-card__image"
-        :class="{ 'article-card__image--horizontal': horizontal }"
-      ></div>
-      <div class="article-card__text-content d-flex flex-column">
+      <div class="article-card__scale-box">
+        <img
+          class="article-card__image"
+          src="@/assets/images/article-example.png"
+          :class="{ 'article-card__image--horizontal': horizontal }"
+        />
+      </div>
+
+      <div class="article-card__text-content d-flex">
         <time class="view__date">{{ date }}</time>
         <router-link :to="{ name: 'article' }" class="router-link-reset">
           <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
@@ -34,19 +38,38 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
 <style lang="scss" scoped>
 .article-card {
   gap: 1.5rem;
-  &__image {
-    background: #d9d9d9;
-    height: 22.5rem;
-    max-width: 35rem;
-    &--horizontal {
-      max-width: 13rem;
-      flex-basis: 40%;
-      height: 7.75rem;
+  flex-direction: column;
+  &:hover {
+    .article-card__scale-box > img {
+      transform: scale(1.15);
+    }
+    .article-card__title {
+      color: #4c6eb9;
     }
   }
+  &__scale-box {
+    display: inline-block;
+    overflow: hidden;
+    & > img {
+      transition: 1s;
+      display: block;
+    }
+  }
+
+  &__image {
+    height: 22.5rem;
+    width: 100%;
+    object-fit: cover;
+    max-width: 35rem;
+  }
+
+  &__text {
+    display: none;
+  }
   &__text-content {
-    flex-shrink: 1;
-    gap: 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-direction: column-reverse;
   }
   &__date {
     text-transform: uppercase;
@@ -57,7 +80,34 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   &__title {
     font-weight: 700;
     font-size: 1.5rem;
-    &--small {
+  }
+}
+
+@media (min-width: 577px) {
+  .article-card {
+    &--horizontal {
+      flex-direction: row;
+    }
+    &__image {
+      &--horizontal {
+        max-width: 13rem;
+        flex-basis: 40%;
+        height: 7.75rem;
+      }
+    }
+    &__title {
+      &--small {
+        font-size: 1rem;
+      }
+    }
+    &__text {
+      display: block;
+    }
+    &__text-content {
+      flex-shrink: 1;
+      gap: 1.5rem;
+      flex-direction: column;
+      font-weight: 400;
       font-size: 1rem;
     }
   }

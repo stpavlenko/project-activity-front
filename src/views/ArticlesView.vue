@@ -12,15 +12,18 @@ function smallArticle(index) {
     <h2 class="view__title">Статьи</h2>
 
     <div class="row g-5">
-      <div class="col-8">
-        <input
-          type="text"
-          class="view__input form-control"
-          aria-label="Text input with dropdown button"
-          placeholder="Введите запрос"
-        />
+      <div class="col-8 search">
+        <div class="d-flex">
+          <input
+            type="text "
+            class="view__input form-control"
+            aria-label="Text input with dropdown button"
+            placeholder="Введите запрос"
+          />
+          <button class="border-start-0 search-button view__input"></button>
+        </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 select">
         <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
           <option selected>По новизне</option>
           <option value="1">One</option>
@@ -54,15 +57,34 @@ function smallArticle(index) {
 .articles__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  /* grid-template-rows: repeat(20, 1fr); */
   margin-top: 3rem;
   gap: 2.5rem;
 }
 
 .article {
   grid-row: span 4;
-  &--small {
+  /* &--small {
     grid-row: span 1;
+  } */
+}
+@media (min-width: 577px) {
+  .article {
+    grid-row: span 4;
+    &--small {
+      grid-row: span 1;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .select {
+    display: none;
+  }
+  .search {
+    width: 100%;
+  }
+  .articles__content {
+    grid-template-columns: 1fr;
   }
 }
 </style>
