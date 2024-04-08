@@ -21,13 +21,10 @@ import Laboratory from '../components/Laboratory.vue'
   </div>
 </template>
 <style lang="scss" scoped>
-
 .laboratories {
   display: grid;
   gap: 3rem 2.5rem;
   grid-template-columns: repeat(2, 1fr);
-
-
 }
 
 .wrapper {
@@ -43,9 +40,9 @@ h2 {
   margin-bottom: 2.75rem;
 }
 
-.search-button {
-  background: transparent url('../../public/searchIcon.svg') no-repeat center;
-  width: 24px;
-  cursor: pointer;
+@media (max-width: 576px) {
+  .laboratories {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -104,6 +104,10 @@ function scroll() {
   letter-spacing: 1.98px;
   text-transform: uppercase;
   text-decoration: none;
+  &:hover {
+    transition: 0.5s;
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 1020px) {

@@ -38,6 +38,10 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     border-radius: 0;
     border: 1px solid #1e1e1e;
     padding: 1rem 2rem;
+    &:hover::placeholder {
+      transition: 0.5s;
+      color: #c4c4c4;
+    }
   }
   &__submit-btn {
     background: #1e1e1e;
@@ -80,6 +84,20 @@ body {
   &--default-m {
     margin-bottom: 13.75rem;
     margin-top: 2.75rem;
+  }
+}
+
+.form-control:focus {
+  border-color: var(--bs-body-color);
+  box-shadow: none;
+}
+.search-button {
+  background: transparent url('../../public/searchIcon.svg') no-repeat center;
+  width: 24px;
+  cursor: pointer;
+  &:hover {
+    transition: 0.5s;
+    background: transparent url('../../public/searchIconHover.svg') no-repeat center;
   }
 }
 </style>

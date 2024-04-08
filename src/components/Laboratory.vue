@@ -10,6 +10,12 @@
 @use '@/assets/style/variables' as *;
 
 .laboratory {
+  &:hover {
+    .laboratory__title {
+      transition: 0.5s;
+      color: #4c6eb9;
+    }
+  }
   &__img {
     background-color: $bg-tertiary;
     height: 360px;
