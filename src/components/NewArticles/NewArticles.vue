@@ -11,12 +11,18 @@ import PanelElements from '../PanelElements.vue'
     <h2 class="new-articles__heading">Новые статьи</h2>
 
     <div class="new-articles__container">
-      <div class="new-articles__item first">
-        <h3 class="new-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="new-articles__item second">
-        <h3 class="new-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
     </div>
 
@@ -25,44 +31,45 @@ import PanelElements from '../PanelElements.vue'
 </template>
 
 <style scoped lang="css">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gilroy', 'sans-serif';
-}
-
-.main__new-articles {
-  margin: 120px 138px 0px;
-}
-
 .new-articles__heading {
   font-size: 32px;
   font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 .new-articles__container {
-  margin: 48px 0px;
+  margin: 0px;
+  margin-bottom: 1.5rem;
   display: flex;
   width: 100%;
 }
 
+.new-articles__img {
+  width: 100%;
+}
 .new-articles__item {
-  width: 50%;
-  height: 410px;
+  position: relative;
+  &:hover {
+    .new-articles__img-box > img {
+      transform: scale(1.1);
+    }
+  }
 }
-
-.first {
-  background-color: #d9d9d9;
+.new-articles__img-box {
+  display: block;
+  overflow: hidden;
+  & > img {
+    display: block;
+    transition: 0.5s;
+  }
 }
-
-.second {
-  background-color: #999;
-}
-
-.new-article__heading {
-  color: #fff;
-  font-size: 24px;
-  margin-top: 273px;
-  margin-left: 68px;
+.new-articles__title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  margin: 2.75rem;
 }
 </style>

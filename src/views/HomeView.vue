@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <Banner />
-    <NewArticles />
-    <PopularArticles />
+    <div class="wrapper">
+      <NewArticles />
+      <PopularArticles />
+    </div>
   </div>
 </template>
 
@@ -14,6 +16,6 @@ import PopularArticles from '@/components/PopularArticles/PopularArticles.vue'
 
 <style scoped lang="css">
 .home {
-  margin-bottom: 220px;
+  margin-bottom: 5rem;
 }
 </style>

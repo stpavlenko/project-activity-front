@@ -6,14 +6,16 @@ export default {
 
 <template>
   <div class="main__banner">
-    <h2 class="banner__heading">Название новости</h2>
+    <!-- <img src="@/assets/images/new-article__1.jpg" alt="" class="banner__img" /> -->
+    <h2 class="banner__heading">
+      Приветствуем вас на странице научного
+      <br />сектора Московского политеха!
+    </h2>
     <p class="banner__text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo con. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-      eu fugiat nulla pariatu. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-      officia deserunt mollit anim id es. Sed ut perspiciatis unde omnis iste natus error sit
-      voluptatem accusantium doloremque laudantium, to Nemo enim ipsam voluptatem quia voluptas sit
+      Здесь мы объединяем студентов и учёных в интересном путешествии<br />по актуальным научным
+      исследованиям.<br />
+      Присоединяйтесь к научному обществу, где идеи преобразуются<br />
+      в инновации, а знание становится ключом к современному прогрессу.
     </p>
   </div>
 </template>
@@ -31,6 +33,7 @@ export default {
   padding-top: 416px;
   padding-left: 138px;
   background-color: #999;
+  /* background-image: url('@/assets/images/new-article__1.jpg'); */
 }
 
 .banner__heading {
@@ -46,4 +49,10 @@ export default {
   line-height: 28px;
   color: #fff;
 }
+/* .banner__img {
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  top: 0%;
+} */
 </style>
