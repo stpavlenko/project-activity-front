@@ -21,8 +21,8 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
   &__title {
     font-size: 2.5rem;
     font-weight: 800;
-    margin-top: 2.75rem;
-    margin-bottom: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   &__load-btn {
     text-transform: uppercase;
@@ -32,7 +32,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     border-bottom: 2px solid black;
     border-radius: 0;
     padding-inline: 0;
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
   }
   &__input {
     border-radius: 0;

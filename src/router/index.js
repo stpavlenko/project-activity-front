@@ -60,20 +60,25 @@ const router = createRouter({
           ]
         },
         {
-          path: 'scientists',
-          name: 'scientists',
-          component: () => import('@/views/ScientistsView.vue'),
+          path: 'scientists',    
           meta: {
             breadcrumb: 'Ученые'
-          }
-        },
-        {
-          path: 'scientist',
-          name: 'scientist',
-          component: () => import('@/views/ScientistView.vue'),
-          meta: {
-            breadcrumb: 'Ученый'
-          }
+          },
+          children: [
+            {
+              path:'',
+              name: 'scientists',
+              component: () => import('@/views/ScientistsView.vue'),
+            },
+            {
+              path: 'scientist',
+              name: 'scientist',
+              component: () => import('@/views/ScientistView.vue'),
+              meta: {
+                breadcrumb: 'Ученый'
+              }
+            },
+          ]
         },
         {
           path: 'laboratories',
