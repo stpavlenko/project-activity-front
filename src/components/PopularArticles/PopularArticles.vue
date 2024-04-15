@@ -5,83 +5,61 @@
 </script>
 
 <template>
-  <div class="main__popular-articles">
-    <h2 class="popular-articles__heading">Популярные статьи</h2>
-    <div class="popular-articles__container">
+  <div class="main__new-articles">
+    <h2 class="new-articles__heading">Популярные статьи</h2>
 
-      <div class="popular-articles__item first">
-        <h3 class="popular-article__heading">Название статьи</h3>
+    <div class="new-articles__container">
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="popular-articles__item second">
-        <h3 class="popular-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="popular-articles__item second">
-        <h3 class="popular-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="popular-articles__item  first">
-        <h3 class="popular-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="popular-articles__item first">
-        <h3 class="popular-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
 
-      <div class="popular-articles__item second">
-        <h3 class="popular-article__heading">Название статьи</h3>
+      <div class="new-articles__item">
+        <div class="new-articles__img-box">
+          <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+        </div>
+        <h3 class="new-articles__title">Название статьи</h3>
       </div>
     </div>
-   
-
-    <button class="spheres-btn">Загрузить еще</button>
   </div>
+
+  <button class="spheres-btn">Загрузить еще</button>
 </template>
 
 <style scoped lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gilroy', 'sans-serif';
+.main__new-articles {
+  margin-bottom: 0;
 }
-.main__popular-articles {
-  margin-top: 120px;
-  margin-left: 138px;
-  margin-right: 138px;
-}
-.popular-articles__heading {
-  font-size: 32px;
-  font-weight: 700;
-}
-.popular-articles__container {
-  margin-top: 48px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.popular-articles__item {
-  width: 50%;
-  height: 410px;
-}
-
-.popular-article__heading {
-  color: #fff;
-  font-size: 24px;
-  margin-top: 273px;
-  margin-left: 68px;
-}
-
-.first {
-  background-color: #d9d9d9;
-}
-
-.second {
-  background-color: #999;
-}
-
 .spheres-btn {
   margin-top: 56px;
   font-size: 12px;
@@ -92,5 +70,50 @@
   text-transform: uppercase;
   border-bottom: 2px solid #000;
   letter-spacing: 2px;
+}
+
+.new-articles__heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.new-articles__container {
+  margin: 0px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.new-articles__img {
+  width: 100%;
+}
+.new-articles__item {
+  position: relative;
+  margin: 0px 0px;
+  width: 50%;
+
+  &:hover {
+    .new-articles__img-box > img {
+      transform: scale(1.1);
+    }
+  }
+}
+.new-articles__img-box {
+  display: block;
+  overflow: hidden;
+  & > img {
+    display: block;
+    transition: 0.5s;
+  }
+}
+.new-articles__title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  margin: 2.75rem;
 }
 </style>

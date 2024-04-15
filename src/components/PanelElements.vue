@@ -7,7 +7,7 @@
       <p class="panel__text">06</p>
     </div>
     <div class="panel__btns">
-      <button class="panel__btn">
+      <button class="panel__btn back">
         <svg
           width="53"
           height="52"
@@ -31,7 +31,7 @@
           />
         </svg>
       </button>
-      <button class="panel__btn">
+      <button class="panel__btn forward">
         <svg
           width="53"
           height="52"
@@ -51,6 +51,52 @@
   </div>
 </template>
 <style lang="scss" scoped>
+.forward svg {
+  &:hover {
+    fill: black;
+    path {
+      stroke: white;
+      stroke-opacity: 1;
+    }
+  }
+}
+
+.forward svg {
+  transition: 0.5s;
+  fill: white;
+  path {
+    stroke: black;
+    stroke-opacity: 1;
+  }
+}
+
+.back svg {
+  &:hover {
+    fill: #8e8e8e;
+    path {
+      stroke: white;
+      stroke-opacity: 1;
+    }
+    circle {
+      stroke: white;
+      stroke-opacity: 1;
+    }
+  }
+}
+
+.back svg {
+  transition: 0.5s;
+  fill: white;
+  path {
+    stroke: #8e8e8e;
+    stroke-opacity: 1;
+  }
+  circle {
+    stroke: #8e8e8e;
+    stroke-opacity: 1;
+  }
+}
+
 p {
   margin: 0;
 }
@@ -70,7 +116,7 @@ p {
     font-size: 12px;
     font-weight: 700;
     color: #1e1e1e;
-    &--light{
+    &--light {
       opacity: 0.5;
     }
   }
