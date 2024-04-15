@@ -8,12 +8,16 @@
           type="search"
           class="form-control border-end-0 view__input"
           aria-label="Text input with dropdown button"
-          placeholder="Найти ученого"
+          placeholder="Поиск"
         />
         <button class="border-start-0 search-button view__input"></button>
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class="col mb-4" v-for="(scientist, index) in scientists" :key="index">
+        <div
+          class="col mb-4 scientists__content"
+          v-for="(scientist, index) in scientists"
+          :key="index"
+        >
           <ScientistCard :title="scientist.title" :text="scientist.text" />
         </div>
       </div>
@@ -45,17 +49,17 @@ const scientists = [
   margin-bottom: 3rem;
 }
 
-h2 {
-  margin-top: 2.75rem;
-}
-
 .wrapper {
   margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
+  margin-bottom: 5rem;
 }
 .search-button {
   background: transparent url('/searchIcon.svg') no-repeat center;
   width: 24px;
   cursor: pointer;
+}
+.scientists__content {
+  padding-left: 1.25rem;
+  padding-right: 1.26rem;
 }
 </style>

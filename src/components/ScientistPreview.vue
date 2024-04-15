@@ -1,13 +1,14 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <div class="row flex-sm-row scientist-preview">
-    <div class="scientist-preview__img col"></div>
-    <div class="scientist-preview__info col">
+  <div class="scientist-preview">
+    <div class="scientist-preview__img-box">
+      <img src="@/assets/images/profile-example.jpg" class="scientist-preview__img" alt="" />
+    </div>
+    <div class="scientist-preview__info">
       <h1 class="scientist-preview__name view__title">
-        <span>Фамилия</span>
-        <span>Имя Отчество</span>
+        <span>Мошин</span>
+        <span>Андрей Алексеевич</span>
       </h1>
       <div class="scientist-preview__subinfo">Ученая степень</div>
       <div class="scientist-preview__subinfo">Персональные идентификаторы (ID)</div>
@@ -25,15 +26,14 @@ span {
   display: block;
 }
 .scientist-preview {
+  display: flex;
   list-style: none;
   gap: 2.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   padding-top: 2.75rem;
   margin: 0;
   &__img {
     padding: 0;
-    max-width: 25rem;
-    min-width: 16rem;
     height: 25rem;
     background-color: #c2c2c2;
   }
@@ -58,6 +58,9 @@ span {
     line-height: 1.8rem;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 576px) {
+  .scientist-preview {
+    display: block;
+  }
 }
 </style>

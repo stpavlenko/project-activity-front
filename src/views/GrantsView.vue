@@ -6,9 +6,9 @@ const grants = ['Грант имени П.Л. Капицы', 'Грант име�
 <template>
   <div class="wrapper">
     <project-breadcrumb />
-    <h2 class="view__title view__title-margin12">Гранты</h2>
+    <h2 class="view__title">Гранты</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
-      <div class="col mb-4" v-for="grant in grants">
+      <div class="col mb-4 grants__content" v-for="grant in grants">
         <GrantCard :name="grant" />
       </div>
     </div>
@@ -20,8 +20,8 @@ const grants = ['Грант имени П.Л. Капицы', 'Грант име�
   margin-top: 2.75rem;
   margin-bottom: 5rem;
 }
-
-.view__title-margin12 {
-  margin-bottom: 0.75rem;
+.grants__content {
+  padding-left: 1.25rem;
+  padding-right: 1.26rem;
 }
 </style>

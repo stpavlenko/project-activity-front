@@ -4,7 +4,9 @@ defineProps(['title', 'text'])
 <template>
   <div>
     <div class="d-flex scientist-card flex-column">
-      <div class="scientist-card__image"></div>
+      <div class="scientist-card__scale-box">
+        <img class="scientist-card__image" src="@/assets/images/profile-example.jpg" />
+      </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
           ><span class="scientist-card__title">
@@ -18,11 +20,27 @@ defineProps(['title', 'text'])
 </template>
 <style lang="scss" scoped>
 .scientist-card {
+  &:hover {
+    .scientist-card__scale-box > img {
+      transform: scale(1.1);
+    }
+    .scientist-card__title {
+      color: #4c6eb9;
+    }
+  }
+  &__scale-box {
+    display: inline-block;
+    overflow: hidden;
+    & > img {
+      display: block;
+      transition: 0.5s;
+    }
+  }
   gap: 1.5rem;
   &__image {
     background: #d9d9d9;
-    height: 22.5rem;
-    max-width: 35rem;
+    height: 100%;
+    max-width: 100%;
     &--horizontal {
       max-width: 13rem;
       flex-basis: 40%;
@@ -39,6 +57,14 @@ defineProps(['title', 'text'])
     &--small {
       font-size: 1rem;
     }
+  }
+}
+@media (max-width: 576px) {
+  .scientist-card {
+    gap: 1rem;
+  }
+  .scientist-card__text-content {
+    gap: 0.5rem;
   }
 }
 </style>

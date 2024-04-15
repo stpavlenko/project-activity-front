@@ -14,6 +14,6 @@ import ScientistInfo from '../components/ScientistInfo.vue'
 <style lang="scss" scoped>
 .wrapper {
   margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
+  margin-bottom: 5rem;
 }
 </style>

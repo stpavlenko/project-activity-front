@@ -47,10 +47,10 @@
         </p>
       </div>
       <div class="docs row flex-sm-row">
-        <button type="button" class="view__link-btn btn col">
+        <button type="button" class="view__link-btn btn col docs__btn">
           <img src="@/assets/images/paperclip.png" alt="paperclip" />Положение о системе отбора
         </button>
-        <button type="button" class="view__link-btn btn col">
+        <button type="button" class="view__link-btn btn col docs__btn">
           <img src="@/assets/images/paperclip.png" alt="paperclip" />Приказ
         </button>
       </div>
@@ -68,7 +68,6 @@
 }
 
 .grant {
-  padding-bottom: 7.5rem;
   &__info {
     padding-bottom: 4rem;
     line-height: 1.75rem;
@@ -86,5 +85,12 @@
 }
 .docs {
   gap: 2.5rem;
+  &__btn {
+    &:hover {
+      background-color: #c4c4c4;
+      color: white;
+      transition: 0.5s;
+    }
+  }
 }
 </style>
