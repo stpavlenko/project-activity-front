@@ -24,6 +24,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
   }
+
   &__load-btn {
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -33,16 +34,20 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     border-radius: 0;
     padding-inline: 0;
     margin-top: 1.5rem;
+    letter-spacing: 2px;
   }
+
   &__input {
     border-radius: 0;
     border: 1px solid #1e1e1e;
     padding: 1rem 2rem;
+
     &:hover::placeholder {
       transition: 0.5s;
       color: #c4c4c4;
     }
   }
+
   &__submit-btn {
     background: #1e1e1e;
     color: #ffffff;
@@ -51,6 +56,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     border-radius: 0;
     padding: 1rem 5rem;
   }
+
   &__link-btn {
     display: flex;
     flex-flow: row;
@@ -65,6 +71,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     line-height: 175%;
     padding: 1.438rem 2rem;
   }
+
   &__date {
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -81,6 +88,7 @@ body {
   max-width: calc(1150px + 2rem);
   padding-inline: 1rem;
   margin-inline: auto;
+
   &--default-m {
     margin-bottom: 13.75rem;
     margin-top: 2.75rem;
@@ -91,10 +99,12 @@ body {
   border-color: var(--bs-body-color);
   box-shadow: none;
 }
+
 .search-button {
   background: transparent url('../../public/searchIcon.svg') no-repeat center;
   width: 24px;
   cursor: pointer;
+
   &:hover {
     transition: 0.5s;
     background: transparent url('../../public/searchIconHover.svg') no-repeat center;

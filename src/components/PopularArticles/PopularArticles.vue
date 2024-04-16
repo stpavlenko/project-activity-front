@@ -53,13 +53,14 @@
     </div>
   </div>
 
-  <button class="spheres-btn">Загрузить еще</button>
+  <button class="btn view__load-btn">Загрузить еще</button>
 </template>
 
 <style scoped lang="scss">
 .main__new-articles {
   margin-bottom: 0;
 }
+
 .spheres-btn {
   margin-top: 56px;
   font-size: 12px;
@@ -78,6 +79,7 @@
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
+
 .new-articles__container {
   margin: 0px;
   display: flex;
@@ -88,6 +90,7 @@
 .new-articles__img {
   width: 100%;
 }
+
 .new-articles__item {
   position: relative;
   margin: 0px 0px;
@@ -99,14 +102,17 @@
     }
   }
 }
+
 .new-articles__img-box {
   display: block;
   overflow: hidden;
+
   & > img {
     display: block;
     transition: 0.5s;
   }
 }
+
 .new-articles__title {
   color: white;
   font-size: 1.5rem;
