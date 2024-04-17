@@ -1,37 +1,27 @@
-<script>
-export default {
-  name: 'Banner'
-}
-</script>
+<script setup></script>
 
 <template>
   <div class="main__banner">
+    <div class="wrapper">
+      <h2 class="banner__heading">
+        Приветствуем вас на странице научного
+        <br />сектора Московского политеха!
+      </h2>
+      <p class="banner__text">
+        Здесь мы объединяем студентов и учёных в интересном путешествии<br />по актуальным научным
+        исследованиям.<br />
+        Присоединяйтесь к научному обществу, где идеи преобразуются<br />
+        в инновации, а знание становится ключом к современному прогрессу.
+      </p>
+    </div>
     <!-- <img src="@/assets/images/new-article__1.jpg" alt="" class="banner__img" /> -->
-    <h2 class="banner__heading">
-      Приветствуем вас на странице научного
-      <br />сектора Московского политеха!
-    </h2>
-    <p class="banner__text">
-      Здесь мы объединяем студентов и учёных в интересном путешествии<br />по актуальным научным
-      исследованиям.<br />
-      Присоединяйтесь к научному обществу, где идеи преобразуются<br />
-      в инновации, а знание становится ключом к современному прогрессу.
-    </p>
   </div>
 </template>
 
 <style scoped lang="css">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Gilroy', 'sans-serif';
-}
 .main__banner {
-  height: 826px;
-  width: 100%;
-  padding-top: 416px;
-  padding-left: 138px;
+  padding-top: 27.5rem;
+  padding-bottom: 5.5rem;
   background-color: #999;
   /* background-image: url('@/assets/images/new-article__1.jpg'); */
 }
@@ -49,6 +39,7 @@ export default {
   line-height: 28px;
   color: #fff;
 }
+
 /* .banner__img {
   position: absolute;
   right: 0%;
