@@ -10,11 +10,11 @@ defineProps({
       <div class="sci-fi__img"></div>
     </router-link>
     <h3 class="mt-4">
-      <router-link :to="{ name: routerName }" class="router-link-reset">
+      <router-link :to="{ name: routerName }" class="router-link-reset view__card-title">
         {{ label }}
       </router-link>
     </h3>
-    <p class="mt-4">
+    <p class="mt-4 view__card-text">
       /превью/ на 2-3 строки . Московский политехнический университет приглашает молодых ученых
       (постдоков) в возрасте до 39 лет
     </p>

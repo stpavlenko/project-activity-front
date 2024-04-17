@@ -18,6 +18,11 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
 }
 
 .view {
+  &__content-wrapper {
+    margin-top: 2.75rem;
+    margin-bottom: 13.75rem;
+  }
+
   &__title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -78,6 +83,10 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     font-weight: 500;
     color: #c2c2c2;
   }
+
+  &__card-title {
+    font-size: 24px;
+  }
 }
 
 body {
@@ -86,6 +95,7 @@ body {
 
 .wrapper {
   max-width: calc(1150px + 2rem);
+  width: 100%;
   padding-inline: 1rem;
   margin-inline: auto;
 
@@ -108,6 +118,28 @@ body {
   &:hover {
     transition: 0.5s;
     background: transparent url('../../public/searchIconHover.svg') no-repeat center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .view {
+    &__card-title {
+      font-size: 1rem;
+    }
+
+    &__card-text {
+      font-size: .75rem;
+    }
+
+    &__title {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+    }
+
+    &__content-wrapper {
+      margin-top: 1.5rem;
+      margin-bottom: 5rem;
+    }
   }
 }
 </style>

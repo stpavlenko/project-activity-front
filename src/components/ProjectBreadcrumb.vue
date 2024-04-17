@@ -18,6 +18,7 @@ const matchedRoutes = computed(() => route.matched.filter((route) => route.meta?
 
 <style lang="scss" scoped>
 @use '@/assets/style/variables' as *;
+
 .breadcrumb {
   text-transform: uppercase;
   text-decoration: none;
@@ -26,5 +27,11 @@ const matchedRoutes = computed(() => route.matched.filter((route) => route.meta?
   font-size: 0.75rem;
   font-weight: 800;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.5rem;
+  }
 }
 </style>

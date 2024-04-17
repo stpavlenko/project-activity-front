@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="main__banner">
     <div class="wrapper">

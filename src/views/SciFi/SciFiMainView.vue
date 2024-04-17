@@ -8,7 +8,7 @@ const projects = [
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="view__content-wrapper wrapper">
     <project-breadcrumb />
 
     <h2 class="view__title">Научно-популярные проекты</h2>
@@ -24,15 +24,6 @@ const projects = [
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
-}
-
-h2 {
-  margin-top: 2.75rem;
-}
-
 .previews {
   display: flex;
   flex-direction: column;
