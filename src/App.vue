@@ -10,6 +10,7 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
 </template>
 
 <style lang="scss">
+@use '@/assets/style/variables' as *;
 @import '@/assets/fonts/stylesheet.css';
 
 .router-link-reset {
@@ -84,7 +85,14 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     color: #c2c2c2;
   }
 
+  &__card:hover &__card-title {
+    color: $text-card-hover;
+  }
+
   &__card-title {
+    transition: $card-transition-duration;
+    margin-top: 1.5rem;
+    font-weight: 700;
     font-size: 24px;
   }
 }
@@ -124,15 +132,18 @@ body {
 @media screen and (max-width: 768px) {
   .view {
     &__card-title {
+      margin-top: 0.5rem;
       font-size: 1rem;
     }
 
     &__card-text {
+      margin-top: 0.5rem;
       font-size: .75rem;
+      margin-bottom: 2.5rem;
     }
 
     &__title {
-      margin-top: 1rem;
+      margin-block: 1rem;
       font-size: 1.25rem;
     }
 

@@ -1,5 +1,6 @@
 <script setup>
 import SciFiPreview from '@/components/SciFi/SciFiPreview.vue'
+import SearchForm from '@/components/UI/SearchForm.vue'
 
 const projects = [
   { label: 'Научная кухня', routerName: 'sciKitchen' },
@@ -13,7 +14,7 @@ const projects = [
 
     <h2 class="view__title">Научно-популярные проекты</h2>
 
-    <input type="text" class="view__input form-control" />
+    <search-form />
 
     <div class="row mt-5">
       <div class="col-sm-12 col-md-6" v-for="project in projects" :key="project.routerName">
@@ -22,11 +23,3 @@ const projects = [
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.previews {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-</style>

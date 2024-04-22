@@ -1,5 +1,6 @@
 <script setup>
 import ArticleCard from '@/components/ArticleCard.vue'
+import SearchForm from '@/components/UI/SearchForm.vue'
 
 function smallArticle(index) {
   return [2, 3, 4, 5].includes(index)
@@ -9,19 +10,12 @@ function smallArticle(index) {
 <template>
   <div class="wrapper articles">
     <project-breadcrumb />
+
     <h2 class="view__title">Статьи</h2>
 
     <div class="row g-5">
       <div class="col-8 search">
-        <div class="d-flex">
-          <input
-            type="text "
-            class="view__input form-control"
-            aria-label="Text input with dropdown button"
-            placeholder="Введите запрос"
-          />
-          <button class="border-start-0 search-button view__input"></button>
-        </div>
+        <search-form />
       </div>
       <div class="col-4 select">
         <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
@@ -51,9 +45,11 @@ function smallArticle(index) {
   padding-top: 2.75rem;
   padding-bottom: 13.75rem;
 }
+
 .view__title {
   margin-top: 2.75rem;
 }
+
 .articles__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,14 +64,17 @@ function smallArticle(index) {
     grid-row: span 1;
   } */
 }
+
 @media (min-width: 577px) {
   .article {
     grid-row: span 4;
+
     &--small {
       grid-row: span 1;
     }
   }
 }
+
 @media (max-width: 576px) {
   .select {
     display: none;
