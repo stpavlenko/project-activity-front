@@ -39,7 +39,7 @@ defineProps(['title', 'text'])
   gap: 1.5rem;
   &__image {
     background: #d9d9d9;
-    height: 100%;
+    object-fit: cover;
     max-width: 100%;
     &--horizontal {
       max-width: 13rem;

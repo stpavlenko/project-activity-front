@@ -39,8 +39,8 @@ defineProps(['name'])
   }
   &__image {
     background: #d9d9d9;
-    height: 100%;
     max-width: 100%;
+    object-fit: cover;
   }
   &__title {
     font-weight: 700;
