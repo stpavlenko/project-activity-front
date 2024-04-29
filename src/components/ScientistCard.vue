@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['title', 'text'])
+defineProps(['lastname', 'firstname', 'text'])
 </script>
 <template>
   <div>
@@ -9,9 +9,8 @@ defineProps(['title', 'text'])
       </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
-          ><span class="scientist-card__title">
-            {{ title }}
-          </span></RouterLink
+          ><span class="scientist-card__title"> {{ firstname }} </span>
+          <span class="scientist-card__title"> {{ lastname }} </span></RouterLink
         >
         <p class="scientist-card__text">{{ text }}</p>
       </div>
@@ -49,14 +48,19 @@ defineProps(['title', 'text'])
   }
   &__text-content {
     flex-shrink: 1;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
   &__title {
     font-weight: 700;
     font-size: 1.5rem;
+    display: block;
+    line-height: 2rem;
     &--small {
       font-size: 1rem;
     }
+  }
+  &__text {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 576px) {

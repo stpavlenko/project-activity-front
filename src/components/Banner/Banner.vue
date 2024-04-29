@@ -12,36 +12,28 @@
         в инновации, а знание становится ключом к современному прогрессу.
       </p>
     </div>
-    <!-- <img src="@/assets/images/new-article__1.jpg" alt="" class="banner__img" /> -->
   </div>
 </template>
 
 <style scoped lang="css">
 .main__banner {
   padding-top: 27.5rem;
-  padding-bottom: 5.5rem;
+  padding-bottom: 9rem;
   background-color: #999;
-  /* background-image: url('@/assets/images/new-article__1.jpg'); */
 }
 
 .banner__heading {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 3.25rem;
   color: #fff;
 }
 
 .banner__text {
   width: 628px;
-  margin-top: 48px;
-  font-size: 16px;
-  line-height: 28px;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #fff;
 }
-
-/* .banner__img {
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  top: 0%;
-} */
 </style>
