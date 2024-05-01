@@ -12,6 +12,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -19,6 +20,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -26,6 +28,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -33,6 +36,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -40,6 +44,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -47,6 +52,7 @@
       <div class="new-articles__item">
         <div class="new-articles__img-box">
           <img src="@/assets/images/article-example.png" alt="" class="new-articles__img" />
+          <div class="new-articles__gradient"></div>
         </div>
         <h3 class="new-articles__title">Название статьи</h3>
       </div>
@@ -102,11 +108,18 @@
     }
   }
 }
-
+.new-articles__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(12, 12, 12, 0.85));
+}
 .new-articles__img-box {
   display: block;
   overflow: hidden;
-
+  position: relative;
   & > img {
     display: block;
     transition: 0.5s;

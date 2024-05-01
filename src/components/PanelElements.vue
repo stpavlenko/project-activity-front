@@ -113,8 +113,8 @@ p {
     gap: 8px;
   }
   &__text {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 900;
     color: #1e1e1e;
     &--light {
       opacity: 0.5;

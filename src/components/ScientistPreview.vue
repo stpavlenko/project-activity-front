@@ -10,12 +10,11 @@
         <span>Мошин</span>
         <span>Андрей Алексеевич</span>
       </h1>
-      <div class="scientist-preview__subinfo">Ученая степень</div>
       <div class="scientist-preview__subinfo">Персональные идентификаторы (ID)</div>
       <ul class="id-list">
-        <li class="id-list__item">Scopus AuthorID:</li>
-        <li class="id-list__item">WoS ResearcherID:</li>
-        <li class="id-list__item">ORCID:</li>
+        <li class="id-list__item">Scopus AuthorID: 57223112617</li>
+        <li class="id-list__item">WoS ResearcherID: ACG-8971-2022</li>
+        <li class="id-list__item">ORCID: 0000-0003-4316-7209</li>
       </ul>
     </div>
   </div>
