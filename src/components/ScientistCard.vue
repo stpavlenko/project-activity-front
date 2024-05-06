@@ -9,8 +9,8 @@ defineProps(['lastname', 'firstname', 'text'])
       </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
-          ><span class="scientist-card__title"> {{ firstname }} </span>
-          <span class="scientist-card__title"> {{ lastname }} </span></RouterLink
+          ><span class="scientist-card__title"> {{ lastname }} </span>
+          <span class="scientist-card__title"> {{ firstname }} </span></RouterLink
         >
         <p class="scientist-card__text">{{ text }}</p>
       </div>
