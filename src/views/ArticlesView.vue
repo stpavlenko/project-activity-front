@@ -15,16 +15,16 @@ function smallArticle(index) {
       <div class="col-8 search">
         <div class="d-flex">
           <input
-            type="text "
-            class="view__input form-control"
+            type="text"
+            class="view__input form-control border-end-0"
             aria-label="Text input with dropdown button"
             placeholder="Введите запрос"
           />
           <button class="border-start-0 search-button view__input"></button>
         </div>
       </div>
-      <div class="col-4 select">
-        <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
+      <div class="custom-select col-4 d-flex select">
+        <select class="col-4 form-control view__input" aria-label=".form-select-sm example">
           <option selected>По новизне</option>
           <option value="1">One</option>
           <option value="2">Two</option>

@@ -115,6 +115,24 @@ body {
   }
 }
 
+/* .form-control {
+  -webkit-appearance: button;
+} */
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: url('../../public/selectButton.svg');
+  top: calc(50% - 11px);
+  right: 3.5rem;
+  pointer-events: none;
+}
+
 .form-control:focus {
   border-color: var(--bs-body-color);
   box-shadow: none;
