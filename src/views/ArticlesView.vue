@@ -1,21 +1,27 @@
 <script setup>
 import ArticleCard from '@/components/ArticleCard.vue'
-import SearchForm from '@/components/UI/SearchForm.vue'
 
 function smallArticle(index) {
-  return [2, 3, 4, 5].includes(index)
+  return [2, 3, 4].includes(index)
 }
 </script>
 
 <template>
   <div class="wrapper articles">
     <project-breadcrumb />
-
     <h2 class="view__title">Статьи</h2>
 
     <div class="row g-5">
       <div class="col-8 search">
-        <search-form />
+        <div class="d-flex">
+          <input
+            type="text "
+            class="view__input form-control"
+            aria-label="Text input with dropdown button"
+            placeholder="Введите запрос"
+          />
+          <button class="border-start-0 search-button view__input"></button>
+        </div>
       </div>
       <div class="col-4 select">
         <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
@@ -28,13 +34,18 @@ function smallArticle(index) {
     </div>
 
     <section class="articles__content">
-      <ArticleCard
-        v-for="index in 13"
-        :key="index"
-        :horizontal="smallArticle(index)"
-        :class="{ 'article--small': smallArticle(index) }"
-        class="article"
-      />
+      <div class="articles__block">
+        <ArticleCard
+          v-for="index in 4"
+          :key="index"
+          :horizontal="smallArticle(index)"
+          :class="{ 'article--small': smallArticle(index) }"
+          class="article"
+        />
+      </div>
+      <div class="articles__block">
+        <ArticleCard v-for="index in 7" :key="index" class="article" />
+      </div>
     </section>
 
     <button type="button" class="btn view__load-btn">Загрузить еще</button>
@@ -44,18 +55,22 @@ function smallArticle(index) {
 .articles {
   padding-top: 2.75rem;
   padding-bottom: 13.75rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(20, 1fr); */
+    /* margin-top: 3rem; */
+    gap: 2.5rem;
+  }
 }
-
 .view__title {
   margin-top: 2.75rem;
-}
-
-.articles__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(20, 1fr); */
-  margin-top: 3rem;
-  gap: 2.5rem;
 }
 
 .article {
@@ -64,17 +79,14 @@ function smallArticle(index) {
     grid-row: span 1;
   } */
 }
-
 @media (min-width: 577px) {
   .article {
     grid-row: span 4;
-
     &--small {
       grid-row: span 1;
     }
   }
 }
-
 @media (max-width: 576px) {
   .select {
     display: none;
