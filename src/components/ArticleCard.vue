@@ -50,9 +50,24 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   &__scale-box {
     display: inline-block;
     overflow: hidden;
+
+    position: relative;
+    line-height: 0;
     & > img {
       transition: 1s;
       display: block;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent;
+      background-image: linear-gradient(to bottom, #1e1e1e00, #1e1e1ebe);
+      opacity: 0.8;
     }
   }
 
@@ -80,6 +95,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   &__title {
     font-weight: 700;
     font-size: 1.5rem;
+    margin: 1.5rem 0rem 0.5rem;
   }
 }
 
@@ -92,7 +108,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
       &--horizontal {
         max-width: 13rem;
         flex-basis: 40%;
-        height: 7.75rem;
+        height: 8.75rem;
       }
     }
     &__title {
@@ -105,10 +121,14 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
     }
     &__text-content {
       flex-shrink: 1;
-      gap: 1.5rem;
+      /* gap: 1.5rem; */
       flex-direction: column;
       font-weight: 400;
       font-size: 1rem;
+    }
+    &__title {
+      display: inline-block;
+      margin: 1.5rem 0rem 0.5rem;
     }
   }
 }

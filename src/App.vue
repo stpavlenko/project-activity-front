@@ -17,7 +17,9 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
   color: inherit;
   text-decoration: none;
 }
-
+.router-link-exact-active {
+  color: #c4c4c4 !important;
+}
 .view {
   &__content-wrapper {
     margin-top: 2.75rem;
@@ -113,6 +115,24 @@ body {
   }
 }
 
+/* .form-control {
+  -webkit-appearance: button;
+} */
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: url('../../public/selectButton.svg');
+  top: calc(50% - 11px);
+  right: 3.5rem;
+  pointer-events: none;
+}
+
 .form-control:focus {
   border-color: var(--bs-body-color);
   box-shadow: none;
@@ -138,7 +158,7 @@ body {
 
     &__card-text {
       margin-top: 0.5rem;
-      font-size: .75rem;
+      font-size: 0.75rem;
       margin-bottom: 2.5rem;
     }
 
