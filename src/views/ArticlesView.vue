@@ -18,7 +18,7 @@ function smallArticle(index) {
             type="text"
             class="view__input form-control border-end-0"
             aria-label="Text input with dropdown button"
-            placeholder="Введите запрос"
+            placeholder="Найти статью"
           />
           <button class="border-start-0 search-button view__input"></button>
         </div>
@@ -69,9 +69,6 @@ function smallArticle(index) {
     gap: 2.5rem;
   }
 }
-.view__title {
-  margin-top: 2.75rem;
-}
 
 .article {
   grid-row: span 4;
@@ -79,7 +76,7 @@ function smallArticle(index) {
     grid-row: span 1;
   } */
 }
-@media (min-width: 577px) {
+@media (min-width: 767px) {
   .article {
     grid-row: span 4;
     &--small {
@@ -87,15 +84,21 @@ function smallArticle(index) {
     }
   }
 }
-@media (max-width: 576px) {
-  .select {
-    display: none;
+@media (max-width: 768px) {
+  .custom-select {
+    display: none !important;
   }
   .search {
     width: 100%;
   }
-  .articles__content {
-    grid-template-columns: 1fr;
+  .articles {
+    &__content {
+      margin-top: 1rem;
+    }
+    &__block {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
   }
 }
 </style>

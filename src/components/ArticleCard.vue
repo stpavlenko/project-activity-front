@@ -24,7 +24,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
       </div>
 
       <div class="article-card__text-content d-flex">
-        <time class="view__date">{{ date }}</time>
+        <time class="article-card__date">{{ date }}</time>
         <router-link :to="{ name: 'article' }" class="router-link-reset">
           <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
             {{ horizontal ? smallTitle : title }}
@@ -37,7 +37,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
 </template>
 <style lang="scss" scoped>
 .article-card {
-  gap: 1.5rem;
+  gap: 0.5rem;
   flex-direction: column;
   &:hover {
     .article-card__scale-box > img {
@@ -75,7 +75,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
     height: 22.5rem;
     width: 100%;
     object-fit: cover;
-    max-width: 35rem;
+    /* max-width: 35rem; */
   }
 
   &__text {
@@ -88,19 +88,21 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   }
   &__date {
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     font-weight: 500;
     color: #c2c2c2;
   }
   &__title {
+    display: inline-block;
     font-weight: 700;
-    font-size: 1.5rem;
-    margin: 1.5rem 0rem 0.5rem;
+    font-size: 0.75rem;
+    margin: 0;
   }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 768px) {
   .article-card {
+    gap: 1.5rem;
     &--horizontal {
       flex-direction: row;
     }
@@ -116,8 +118,12 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
         font-size: 1rem;
       }
     }
+    &__date {
+      font-size: 0.75rem;
+    }
     &__text {
       display: block;
+      font-size: 1rem;
     }
     &__text-content {
       flex-shrink: 1;
@@ -128,6 +134,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
     }
     &__title {
       display: inline-block;
+      font-size: 1.5rem;
       margin: 1.5rem 0rem 0.5rem;
     }
   }
