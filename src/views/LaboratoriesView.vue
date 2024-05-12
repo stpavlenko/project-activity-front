@@ -2,7 +2,7 @@
 import Laboratory from '../components/Laboratory.vue'
 </script>
 <template>
-  <div class="wrapper">
+  <div class="wrapper view__content-wrapper">
     <project-breadcrumb />
     <h2 class="view__title">Лаборатории</h2>
     <div class="search input-group d-flex">
@@ -25,11 +25,6 @@ import Laboratory from '../components/Laboratory.vue'
   display: grid;
   gap: 3rem 2.5rem;
   grid-template-columns: repeat(2, 1fr);
-}
-
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
 }
 
 .search {

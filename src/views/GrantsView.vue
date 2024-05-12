@@ -4,7 +4,7 @@ const grants = ['Грант имени П.Л. Капицы', 'Грант име�
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper view__content-wrapper">
     <project-breadcrumb />
     <h2 class="view__title">Гранты</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
@@ -16,10 +16,6 @@ const grants = ['Грант имени П.Л. Капицы', 'Грант име�
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 5rem;
-}
 .grants__content {
   padding-left: 1.25rem;
   padding-right: 1.26rem;

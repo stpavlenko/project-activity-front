@@ -4,16 +4,11 @@ import ScientistInfo from '../components/ScientistInfo.vue'
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper view__content-wrapper">
     <project-breadcrumb />
     <ScientistPreview />
     <ScientistInfo />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 5rem;
-}
-</style>
+<style lang="scss" scoped></style>

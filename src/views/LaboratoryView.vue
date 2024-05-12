@@ -1,8 +1,8 @@
 <script></script>
 
 <template>
-    <div class="wrapper laboratory">
-        <h1 class="laboratory__heading">Название лаборатории</h1>
+  <div class="wrapper laboratory view__content-wrapper">
+    <h1 class="laboratory__heading">Название лаборатории</h1>
 
     <video class="laboratory__video">
       <!-- <source src="video.mp4" type="video/mp4"> rollup ругается, кривой источник -->
@@ -135,11 +135,6 @@
     margin-top: 40px;
     margin-bottom: 220px;
 } */
-
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
-}
 
 .laboratory__heading {
   color: #1e1e1e;

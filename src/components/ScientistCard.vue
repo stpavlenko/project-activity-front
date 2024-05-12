@@ -40,11 +40,6 @@ defineProps(['lastname', 'firstname', 'text'])
     background: #d9d9d9;
     object-fit: cover;
     max-width: 100%;
-    &--horizontal {
-      max-width: 13rem;
-      flex-basis: 40%;
-      height: 7.75rem;
-    }
   }
   &__text-content {
     flex-shrink: 1;
