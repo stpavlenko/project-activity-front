@@ -32,10 +32,6 @@ import Laboratory from '../components/Laboratory.vue'
   margin-bottom: 13.75rem;
 }
 
-h2 {
-  margin-top: 2.75rem;
-}
-
 .search {
   margin-bottom: 2.75rem;
 }

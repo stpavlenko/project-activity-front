@@ -69,9 +69,6 @@ function smallArticle(index) {
     gap: 2.5rem;
   }
 }
-.view__title {
-  margin-top: 2.75rem;
-}
 
 .article {
   grid-row: span 4;
