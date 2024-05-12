@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <ul class="scientist-info">
@@ -112,6 +111,15 @@
     }
     img {
       padding-right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .scientist-info {
+      &__title {
+        font-size: 1.2rem;
+        padding-bottom: 0;
+      }
     }
   }
 }

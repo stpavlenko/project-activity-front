@@ -8,7 +8,7 @@ defineProps(['name'])
       <div class="grant-card__scale-box">
         <img src="@/assets/images/article-example.png" class="grant-card__image" alt="" />
       </div>
-      <div class="grant-card__title">
+      <div class="grant-card__title view__card-title">
         <RouterLink class="router-link-reset" :to="{ name: 'grant' }">
           <span>{{ name }}</span>
         </RouterLink>
@@ -43,8 +43,6 @@ defineProps(['name'])
     object-fit: cover;
   }
   &__title {
-    font-weight: 700;
-    font-size: 1.5rem;
     margin-top: 1.5rem;
   }
 }
