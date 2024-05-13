@@ -28,4 +28,12 @@
     margin-top: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .laboratory {
+    &__title {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
 </style>
