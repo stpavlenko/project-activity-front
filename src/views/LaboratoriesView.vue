@@ -25,6 +25,7 @@ import Laboratory from '../components/Laboratory.vue'
   display: grid;
   gap: 3rem 2.5rem;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 2.75rem;
 }
 
 .search {
@@ -33,7 +34,9 @@ import Laboratory from '../components/Laboratory.vue'
 
 @media (max-width: 576px) {
   .laboratories {
+    margin-top: 1rem;
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 </style>

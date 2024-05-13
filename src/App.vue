@@ -150,10 +150,20 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .search-button {
+    background: transparent url('../../public/searchIconMobile.svg') no-repeat center;
+  }
   .view {
     &__card-title {
       margin-top: 0.5rem;
       font-size: 1rem;
+    }
+
+    &__input {
+      padding: 0.6875rem 1rem;
+      &::placeholder {
+        font-size: 0.5625rem;
+      }
     }
 
     &__card-text {
@@ -163,7 +173,7 @@ body {
     }
 
     &__title {
-      margin-block: 1rem;
+      margin-top: 1rem;
       font-size: 1.25rem;
     }
 
