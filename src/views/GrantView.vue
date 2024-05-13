@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper view__content-wrapper">
     <project-breadcrumb />
     <h2 class="view__title view__title-margin12">Грант имени П.Л. Капицы</h2>
     <div class="grant">
@@ -59,10 +59,6 @@
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 5rem;
-}
 .view__title-margin12 {
   margin-bottom: 0.75rem;
 }

@@ -1,7 +1,6 @@
-<script setup>
-</script>
+<script setup></script>
 <template>
-  <div class="wrapper article">
+  <div class="wrapper article view__content-wrapper">
     <project-breadcrumb />
 
     <div class="article__card">
@@ -62,11 +61,6 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 13.75rem;
-}
-
 .view__title {
   color: #ffff;
 }

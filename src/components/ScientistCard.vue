@@ -9,10 +9,10 @@ defineProps(['lastname', 'firstname', 'text'])
       </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
-          ><span class="scientist-card__title"> {{ lastname }} </span>
-          <span class="scientist-card__title"> {{ firstname }} </span></RouterLink
+          ><span class="scientist-card__title view__card-title"> {{ lastname }} </span>
+          <span class="scientist-card__title view__card-title"> {{ firstname }} </span></RouterLink
         >
-        <p class="scientist-card__text">{{ text }}</p>
+        <p class="scientist-card__text view__card-text">{{ text }}</p>
       </div>
     </div>
   </div>
@@ -40,27 +40,18 @@ defineProps(['lastname', 'firstname', 'text'])
     background: #d9d9d9;
     object-fit: cover;
     max-width: 100%;
-    &--horizontal {
-      max-width: 13rem;
-      flex-basis: 40%;
-      height: 7.75rem;
-    }
   }
   &__text-content {
     flex-shrink: 1;
     gap: 0.75rem;
   }
   &__title {
-    font-weight: 700;
-    font-size: 1.5rem;
     display: block;
-    line-height: 2rem;
-    &--small {
-      font-size: 1rem;
-    }
+    margin-top: 0;
   }
   &__text {
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 @media (max-width: 576px) {

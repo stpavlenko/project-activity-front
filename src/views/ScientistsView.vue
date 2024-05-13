@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrapper">
+    <div class="wrapper view__content-wrapper">
       <project-breadcrumb />
       <h2 class="view__title">Учёные</h2>
       <div class="sections input-group d-flex">
@@ -86,10 +86,6 @@ const scientists = [
   margin-bottom: 3rem;
 }
 
-.wrapper {
-  margin-top: 2.75rem;
-  margin-bottom: 5rem;
-}
 .search-button {
   background: transparent url('/searchIcon.svg') no-repeat center;
   width: 24px;

@@ -7,7 +7,7 @@ function smallArticle(index) {
 </script>
 
 <template>
-  <div class="wrapper articles">
+  <div class="wrapper articles view__content-wrapper">
     <project-breadcrumb />
     <h2 class="view__title">Статьи</h2>
 
@@ -53,8 +53,6 @@ function smallArticle(index) {
 </template>
 <style lang="scss" scoped>
 .articles {
-  padding-top: 2.75rem;
-  padding-bottom: 13.75rem;
   &__content {
     display: flex;
     flex-direction: column;

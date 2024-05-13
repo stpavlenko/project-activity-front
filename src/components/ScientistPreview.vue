@@ -33,7 +33,8 @@ span {
   margin: 0;
   &__img {
     padding: 0;
-    height: 25rem;
+    width: 25rem;
+    max-width: 90vw;
     background-color: #c2c2c2;
   }
   &__info {
@@ -60,6 +61,20 @@ span {
 @media (max-width: 576px) {
   .scientist-preview {
     display: block;
+    padding-bottom: 1rem;
+    &__name {
+      margin-top: 2rem;
+    }
+    &__subinfo {
+      font-size: 1rem;
+      padding-top: 1rem;
+    }
+    .id-list {
+      &__item {
+        font-size: 1rem;
+      }
+      padding-top: 0;
+    }
   }
 }
 </style>

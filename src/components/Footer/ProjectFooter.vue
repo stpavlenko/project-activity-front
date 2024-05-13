@@ -77,6 +77,7 @@ function scroll() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 6.625rem;
 }
 
 .social-media {
@@ -89,7 +90,7 @@ function scroll() {
 .navigation-list {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  column-gap: 6rem;
+  column-gap: 7.875rem;
   row-gap: 1rem;
   list-style: none;
 }

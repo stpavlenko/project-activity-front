@@ -3,12 +3,12 @@ import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', () => {
   const routes = [
-    { name: 'sciFiMain', text: 'Научпоп' },
+    { name: 'sciFiMain', text: 'Научно-популярные проеты' },
     { name: 'articles', text: 'Статьи' },
+    { name: 'scientists', text: 'Студенческое научное сообщество' },
     { name: 'scientists', text: 'Учёные' },
-    { name: 'scientists', text: 'СНО' },
+    { name: 'home', text: 'Научные гранты' },
     { name: 'laboratories', text: 'Лаборатории' },
-    { name: 'home', text: 'Научные гранты' }
   ]
 
   return { routes }

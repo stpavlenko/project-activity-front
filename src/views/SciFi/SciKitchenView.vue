@@ -6,7 +6,7 @@ defineProps({
 })
 </script>
 <template>
-  <div class="wrapper wrapper--default-m">
+  <div class="wrapper wrapper--default-m view__content-wrapper">
     <project-breadcrumb />
     <h2 class="view__title">Научная кухня</h2>
     <p class="sci-fi__details">
