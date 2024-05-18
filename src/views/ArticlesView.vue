@@ -1,9 +1,22 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import axios from '@/helpers/axios'
 import ArticleCard from '@/components/ArticleCard.vue'
 import SearchForm from '@/components/UI/SearchForm.vue'
 
-function smallArticle(index) {
-  return [2, 3, 4, 5].includes(index)
+const articles = ref([])
+
+onMounted(() => {
+  getStateList()
+})
+
+async function getStateList() {
+  try {
+    const response = await axios.get('state_list/')
+    articles.value = response.data
+  } catch (e) {
+    console.log(e)
+  }
 }
 </script>
 
@@ -28,13 +41,13 @@ function smallArticle(index) {
     </div>
 
     <section class="articles__content">
-      <ArticleCard
-        v-for="index in 13"
-        :key="index"
-        :horizontal="smallArticle(index)"
-        :class="{ 'article--small': smallArticle(index) }"
-        class="article"
-      />
+      <div class="row">
+        <ArticleCard
+          v-for="article in articles"
+          :article=article
+          :key="article.id"
+        />
+      </div>
     </section>
 
     <button type="button" class="btn view__load-btn">Загрузить еще</button>
@@ -51,18 +64,12 @@ function smallArticle(index) {
 }
 
 .articles__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(20, 1fr); */
   margin-top: 3rem;
   gap: 2.5rem;
 }
 
 .article {
   grid-row: span 4;
-  /* &--small {
-    grid-row: span 1;
-  } */
 }
 
 @media (min-width: 577px) {
