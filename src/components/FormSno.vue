@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+
 const radioChecked = ref('show')
 </script>
 <template>
@@ -78,13 +79,15 @@ const radioChecked = ref('show')
         />
       </div>
 
-      <button type="submit" class="w-100 btn view__submit-btn align-self-end mt-4">
+      <button type="submit" class="w-100 btn view__submit-btn align-self-end mt-4 form__submit">
         Отправить заявку
       </button>
     </fieldset>
   </form>
 </template>
 <style lang="scss">
+@use '@/assets/style/variables' as *;
+
 .form {
   &__wrapper {
     box-sizing: content-box;
@@ -96,26 +99,40 @@ const radioChecked = ref('show')
     flex-flow: column;
     gap: 1.24rem;
   }
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 12px;
+
     &--two-columns {
       grid-column: 1/3;
     }
   }
+
   &__flex {
     display: flex;
     flex-flow: column;
     gap: 1.2rem;
   }
+
+  &__submit {
+    transition: $transition-duration-default;
+
+    &:hover {
+      color: #fff;
+      background-color: $bg-tertiary;
+    }
+  }
+
 }
 
 .form-check-input:checked {
   background-color: #000000;
   border-color: #000000;
 }
+
 .form-check-input:focus {
   border-color: none;
   box-shadow: none;

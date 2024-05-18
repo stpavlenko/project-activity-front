@@ -1,5 +1,5 @@
 <script setup>
-import SnoGallery from '../components/SnoGallery.vue';</script>
+import SnoGallery from '../components/SnoGallery.vue'</script>
 <template>
   <div class="wrapper">
     <project-breadcrumb />
@@ -14,16 +14,18 @@ import SnoGallery from '../components/SnoGallery.vue';</script>
             инновационной деятельности, и рассказывает о науке просто.
           </p>
           <div><span>Задачи Студенческого научного общества:</span>
-          <ul>
-            <li>участие и организация студенческих научных мероприятий</li>
-            <li>организация научно-популярных мероприятий</li>
-            <li>ведение научно-популярной проектной деятельности</li>
-            <li>сотрудничество со СНО других ВУЗов</li>
-          </ul></div>
-          
+            <ul>
+              <li>участие и организация студенческих научных мероприятий</li>
+              <li>организация научно-популярных мероприятий</li>
+              <li>ведение научно-популярной проектной деятельности</li>
+              <li>сотрудничество со СНО других ВУЗов</li>
+            </ul>
+          </div>
+
           <p class="sno__text">Присоединяйся к нам, наука – это интересно!</p>
-          <RouterLink class="link" :to="{ name: 'reg-form' }">
-            <button type="button" class="view__load-btn btn">
+
+          <RouterLink class="router-link-reset" :to="{ name: 'reg-form' }">
+            <button type="button" class="btn view__load-btn">
               Вступить в студенческое научное общество
             </button>
           </RouterLink>
@@ -34,8 +36,9 @@ import SnoGallery from '../components/SnoGallery.vue';</script>
         </figure>
       </section>
       <SnoGallery></SnoGallery>
-      <button type="button" class="view__link-btn btn">
-        <img src="@/assets/images/paperclip.png" alt="paperclip" />Положение о Студенческом научном обществе
+      <button type="button" class="view__link-btn btn provision-btn">
+        <img src="@/assets/images/paperclip.png" alt="paperclip" />
+        <span>Положение о Студенческом научном обществе</span>
       </button>
       <section class="contacts">
         <h3 class="contacts__title">Контакты</h3>
@@ -70,9 +73,20 @@ import SnoGallery from '../components/SnoGallery.vue';</script>
   </div>
 </template>
 <style scoped lang="scss">
+@use '@/assets/style/variables' as *;
+
 .wrapper {
   margin-top: 2.75rem;
   margin-bottom: 13.75rem;
+}
+
+.provision-btn {
+  transition: $transition-duration-default;
+
+  &:hover {
+    background-color: $bg-tertiary;
+    color: #fff;
+  }
 }
 
 .contacts {

@@ -1,30 +1,37 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import axios from '@/helpers/axios'
 import ArticleCard from '@/components/ArticleCard.vue'
+import SearchForm from '@/components/UI/SearchForm.vue'
 
-function smallArticle(index) {
-  return [2, 3, 4].includes(index)
+const articles = ref([])
+
+onMounted(() => {
+  getStateList()
+})
+
+async function getStateList() {
+  try {
+    const response = await axios.get('state_list/')
+    articles.value = response.data
+  } catch (e) {
+    console.log(e)
+  }
 }
 </script>
 
 <template>
-  <div class="wrapper articles view__content-wrapper">
+  <div class="wrapper articles">
     <project-breadcrumb />
+
     <h2 class="view__title">Статьи</h2>
 
     <div class="row g-5">
       <div class="col-8 search">
-        <div class="d-flex">
-          <input
-            type="text"
-            class="view__input form-control border-end-0"
-            aria-label="Text input with dropdown button"
-            placeholder="Найти статью"
-          />
-          <button class="border-start-0 search-button view__input"></button>
-        </div>
+        <search-form />
       </div>
-      <div class="custom-select col-4 d-flex select">
-        <select class="col-4 form-control view__input" aria-label=".form-select-sm example">
+      <div class="col-4 select">
+        <select class="col-4 view__input form-control" aria-label=".form-select-sm example">
           <option selected>По новизне</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -34,17 +41,12 @@ function smallArticle(index) {
     </div>
 
     <section class="articles__content">
-      <div class="articles__block">
+      <div class="row">
         <ArticleCard
-          v-for="index in 4"
-          :key="index"
-          :horizontal="smallArticle(index)"
-          :class="{ 'article--small': smallArticle(index) }"
-          class="article"
+          v-for="article in articles"
+          :article=article
+          :key="article.id"
         />
-      </div>
-      <div class="articles__block">
-        <ArticleCard v-for="index in 7" :key="index" class="article" />
       </div>
     </section>
 
@@ -53,50 +55,42 @@ function smallArticle(index) {
 </template>
 <style lang="scss" scoped>
 .articles {
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    margin-top: 3rem;
-  }
-  &__block {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(20, 1fr); */
-    /* margin-top: 3rem; */
-    gap: 2.5rem;
-  }
+  padding-top: 2.75rem;
+  padding-bottom: 13.75rem;
+}
+
+.view__title {
+  margin-top: 2.75rem;
+}
+
+.articles__content {
+  margin-top: 3rem;
+  gap: 2.5rem;
 }
 
 .article {
   grid-row: span 4;
-  /* &--small {
-    grid-row: span 1;
-  } */
 }
-@media (min-width: 767px) {
+
+@media (min-width: 577px) {
   .article {
     grid-row: span 4;
+
     &--small {
       grid-row: span 1;
     }
   }
 }
-@media (max-width: 768px) {
-  .custom-select {
-    display: none !important;
+
+@media (max-width: 576px) {
+  .select {
+    display: none;
   }
   .search {
     width: 100%;
   }
-  .articles {
-    &__content {
-      margin-top: 1rem;
-    }
-    &__block {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
+  .articles__content {
+    grid-template-columns: 1fr;
   }
 }
 </style>

@@ -38,11 +38,31 @@ import ProjectFooter from './components/Footer/ProjectFooter.vue'
     font-size: 0.75rem;
     font-weight: 900;
     border: none;
-    border-bottom: 2px solid black;
     border-radius: 0;
     padding-inline: 0;
     margin-top: 1.5rem;
     letter-spacing: 2px;
+    transition: 0.4s;
+    color: $text-primary;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $text-primary;
+      color: $text-primary;
+      transform: scaleX(1);
+      transition: transform 0.3s ease;
+      transform-origin: right;
+    }
+
+    &:hover::after {
+      transform: scaleX(0);
+    }
   }
 
   &__input {
