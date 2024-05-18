@@ -103,6 +103,10 @@ import { RouterLink } from 'vue-router'
   font-weight: 800; //????
   line-height: normal;
   letter-spacing: 1.4px;
+
+  &:hover {
+    color: $text-secondary;
+  }
 }
 
 @media (max-width: 768px) {
