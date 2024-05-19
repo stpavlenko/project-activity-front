@@ -1,3 +1,24 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import instance from '@/helpers/axios'
+import ScientistCard from '../components/ScientistCard.vue'
+const scientists = ref([])
+
+async function getScientists() {
+  try {
+    const response = await instance.get('scientist_list/')
+    scientists.value = response.data
+    console.log(scientists.value)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+onMounted(() => {
+  getScientists()
+})
+</script>
+
 <template>
   <div>
     <div class="wrapper view__content-wrapper">
@@ -18,69 +39,13 @@
           v-for="(scientist, index) in scientists"
           :key="index"
         >
-          <ScientistCard
-            :lastname="scientist.lastname"
-            :firstname="scientist.firstname"
-            :text="scientist.text"
-          />
+          <ScientistCard :scientist="scientist" />
         </div>
       </div>
       <button type="button" class="btn view__load-btn">Загрузить еще</button>
     </div>
   </div>
 </template>
-
-<script setup>
-import ScientistCard from '../components/ScientistCard.vue'
-const scientists = [
-  {
-    lastname: 'Володько',
-    firstname: 'Сергей Сергеевич',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Воронин',
-    firstname: 'Станислав Сергеевич',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Грибанев',
-    firstname: 'Дмитрий Андреевич',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Кирсанкин',
-    firstname: 'Андрей Александрович',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Комаров',
-    firstname: 'Иван Александрович',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Комаров',
-    firstname: 'Иван Александрович',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Комаров',
-    firstname: 'Иван Александрович',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Комаров',
-    firstname: 'Иван Александрович',
-    text: 'Доцент сектора научной деятельности'
-  },
-  {
-    lastname: 'Комаров',
-    firstname: 'Иван Александрович',
-    text: 'Доцент сектора научной деятельности'
-  }
-]
-</script>
-
 <style lang="scss" scoped>
 .sections {
   margin-bottom: 3rem;
