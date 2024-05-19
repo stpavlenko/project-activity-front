@@ -1,4 +1,3 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', () => {
@@ -8,7 +7,7 @@ export const useAppStore = defineStore('app', () => {
     { name: 'scientists', text: 'Студенческое научное сообщество' },
     { name: 'scientists', text: 'Учёные' },
     { name: 'home', text: 'Научные гранты' },
-    { name: 'laboratories', text: 'Лаборатории' },
+    { name: 'laboratories', text: 'Лаборатории' }
   ]
 
   return { routes }
