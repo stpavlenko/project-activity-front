@@ -1,11 +1,12 @@
 <script setup>
+import { getImgSrc } from '@/helpers/functions'
 defineProps({ scientist: Object })
 </script>
 <template>
   <div>
     <div class="d-flex scientist-card flex-column">
       <div class="scientist-card__scale-box">
-        <img class="scientist-card__image" src="@/assets/images/profile-example.jpg" />
+        <img class="scientist-card__image" :src="getImgSrc(scientist.photo)" />
       </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
