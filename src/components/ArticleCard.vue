@@ -1,6 +1,8 @@
 <script setup>
+import { getImgSrc } from '@/helpers/functions'
+
 const props = defineProps({
-  horizontal: Boolean,
+  small: Boolean,
   article: Object
 })
 const title =
@@ -12,14 +14,14 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
 </script>
 <template>
   <div
-    class="d-flex article-card col-6"
-    :class="{ 'article-card--horizontal': horizontal, 'flex-column': !horizontal }"
+    class="d-flex article-card"
+    :class="{ 'article-card--small': small, 'flex-column': !small }"
   >
     <div class="article-card__scale-box">
       <img
         class="article-card__image"
-        src="@/assets/images/article-example.png"
-        :class="{ 'article-card__image--horizontal': horizontal }"
+        :src="getImgSrc(article.photo)"
+        :class="{ 'article-card__image--small': small }"
       />
     </div>
 
@@ -27,13 +29,13 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
       <time class="view__date">{{ date }}</time>
 
       <router-link :to="{ name: 'article' }" class="router-link-reset">
-          <span class="article-card__title" :class="{ 'article-card__title--small': horizontal }">
-<!--            {{ horizontal ? smallTitle : title }}-->
+          <span class="article-card__title" :class="{ 'article-card__title--small': small }">
+<!--            {{ small ? smallTitle : title }}-->
             {{ props.article.title }}
           </span>
       </router-link>
 
-      <p class="article-card__text" v-if="!horizontal">{{ text }}</p>
+      <!--      <p class="article-card__text" v-if="!small">{{ text }}</p>-->
     </div>
   </div>
 </template>
@@ -55,6 +57,7 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
   &__scale-box {
     display: inline-block;
     overflow: hidden;
+    //width: 200px;
 
     & > img {
       transition: 1s;
@@ -67,6 +70,11 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
     width: 100%;
     object-fit: cover;
     max-width: 35rem;
+
+    &--small {
+      width: 200px;
+      height: 140px;
+    }
   }
 
   &__text {
@@ -94,16 +102,8 @@ const smallTitle = 'Excepteur sint occaecat cupidatat non proident'
 
 @media (min-width: 577px) {
   .article-card {
-    &--horizontal {
+    &--small {
       flex-direction: row;
-    }
-
-    &__image {
-      &--horizontal {
-        max-width: 13rem;
-        flex-basis: 40%;
-        height: 7.75rem;
-      }
     }
 
     &__title {

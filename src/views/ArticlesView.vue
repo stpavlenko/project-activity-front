@@ -18,6 +18,10 @@ async function getStateList() {
     console.log(e)
   }
 }
+
+function isArticleSmall(index) {
+  return [1, 2, 3].includes(index)
+}
 </script>
 
 <template>
@@ -40,14 +44,14 @@ async function getStateList() {
       </div>
     </div>
 
-    <section class="articles__content">
-      <div class="row">
-        <ArticleCard
-          v-for="article in articles"
-          :article=article
-          :key="article.id"
-        />
-      </div>
+    <section class="articles__cards">
+      <ArticleCard
+        v-for="(article, index) in articles"
+        :small=isArticleSmall(index)
+        :article=article
+        :key="article.id"
+        class="article-card"
+      />
     </section>
 
     <button type="button" class="btn view__load-btn">Загрузить еще</button>
@@ -63,19 +67,20 @@ async function getStateList() {
   margin-top: 2.75rem;
 }
 
-.articles__content {
+.articles__cards {
   margin-top: 3rem;
   gap: 2.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.article {
-  grid-row: span 4;
+.article-card {
+  grid-row: span 3;
 }
 
 @media (min-width: 577px) {
-  .article {
-    grid-row: span 4;
-
+  .article-card {
     &--small {
       grid-row: span 1;
     }
@@ -86,10 +91,12 @@ async function getStateList() {
   .select {
     display: none;
   }
+
   .search {
     width: 100%;
   }
-  .articles__content {
+
+  .articles__cards {
     grid-template-columns: 1fr;
   }
 }
