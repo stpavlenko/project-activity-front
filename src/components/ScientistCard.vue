@@ -1,18 +1,23 @@
 <script setup>
-defineProps(['lastname', 'firstname', 'text'])
+import { getImgSrc } from '@/helpers/functions'
+defineProps({ scientist: Object })
 </script>
 <template>
   <div>
     <div class="d-flex scientist-card flex-column">
       <div class="scientist-card__scale-box">
-        <img class="scientist-card__image" src="@/assets/images/profile-example.jpg" />
+        <img class="scientist-card__image" :src="getImgSrc(scientist.photo)" />
       </div>
       <div class="scientist-card__text-content d-flex flex-column">
         <RouterLink class="router-link-reset" :to="{ name: 'scientist' }"
-          ><span class="scientist-card__title view__card-title"> {{ lastname }} </span>
-          <span class="scientist-card__title view__card-title"> {{ firstname }} </span></RouterLink
+          ><span class="scientist-card__title view__card-title">
+            {{ scientist.last_name }}
+          </span>
+          <span class="scientist-card__title view__card-title">
+            {{ scientist.first_name }}
+          </span></RouterLink
         >
-        <p class="scientist-card__text view__card-text">{{ text }}</p>
+        <p class="scientist-card__text view__card-text">{{ scientist.position }}</p>
       </div>
     </div>
   </div>
